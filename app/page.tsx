@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Menu,
   X,
@@ -19,53 +19,39 @@ import {
   Globe,
   Smartphone,
   Palette,
-} from "lucide-react"
+} from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Portfolio() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [theme, setTheme] = useState("green")
-  const [language, setLanguage] = useState("EN")
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("green");
+  const [language, setLanguage] = useState("EN");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "green"
-    setTheme(savedTheme)
-    applyTheme(savedTheme)
-  }, [])
-
-  const applyTheme = (selectedTheme: string) => {
-    document.documentElement.className = ""
-    document.documentElement.classList.add(`theme-${selectedTheme}`)
-  }
+    const savedTheme = localStorage.getItem("theme") || "green";
+    setTheme(savedTheme);
+  }, []);
 
   const toggleTheme = () => {
-    const themes = ["green", "blue", "dark"]
-    const currentIndex = themes.indexOf(theme)
-    const nextTheme = themes[(currentIndex + 1) % themes.length]
-    setTheme(nextTheme)
-    applyTheme(nextTheme)
-    localStorage.setItem("theme", nextTheme)
-  }
+    const themes = ["green", "blue", "dark"];
+    const currentIndex = themes.indexOf(theme);
+    const nextTheme = themes[(currentIndex + 1) % themes.length];
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+  };
 
   const getThemeIcon = () => {
     switch (theme) {
       case "green":
-        return <div className="w-4 h-4 bg-green-500 rounded-full" />
+        return <div className="w-4 h-4 bg-green-500 rounded-full" />;
       case "blue":
-        return <div className="w-4 h-4 bg-blue-500 rounded-full" />
+        return <div className="w-4 h-4 bg-blue-500 rounded-full" />;
       case "dark":
-        return <Moon className="h-4 w-4" />
+        return <Moon className="h-4 w-4" />;
       default:
-        return <Palette className="h-4 w-4" />
+        return <Palette className="h-4 w-4" />;
     }
-  }
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-    setIsMenuOpen(false)
-  }
+  };
 
   const translations = {
     EN: {
@@ -102,7 +88,8 @@ export default function Portfolio() {
       nav: ["Startseite", "Über mich", "Fähigkeiten", "Projekte", "Kontakt"],
       hero: {
         tagline: "Angehender Entwickler & Problemlöser",
-        intro: "Informatikstudent an der FH Joanneum mit Leidenschaft für innovative Web- und Mobile-Anwendungen.",
+        intro:
+          "Informatikstudent an der FH Joanneum mit Leidenschaft für innovative Web- und Mobile-Anwendungen.",
         cta1: "Projekte ansehen",
         cta2: "Kontakt",
       },
@@ -131,7 +118,8 @@ export default function Portfolio() {
       nav: ["Główna", "O mnie", "Umiejętności", "Projekty", "Kontakt"],
       hero: {
         tagline: "Początkujący Programista i Rozwiązywacz Problemów",
-        intro: "Student informatyki na FH Joanneum z pasją do tworzenia innowacyjnych aplikacji webowych i mobilnych.",
+        intro:
+          "Student informatyki na FH Joanneum z pasją do tworzenia innowacyjnych aplikacji webowych i mobilnych.",
         cta1: "Zobacz Projekty",
         cta2: "Kontakt",
       },
@@ -156,21 +144,21 @@ export default function Portfolio() {
         },
       },
     },
-  }
+  };
 
-  const t = translations[language as keyof typeof translations]
+  const t = translations[language as keyof typeof translations];
 
   const skills = [
     { name: "JavaScript", category: "Programming Languages", icon: Code },
     { name: "TypeScript", category: "Programming Languages", icon: Code },
     { name: "Java", category: "Programming Languages", icon: Code },
-    { name: "SQL", category: "Programming Languages", icon: Database },
+    { name: "SQL", category: "Query Languages", icon: Database },
     { name: "React", category: "Libraries", icon: Globe },
     { name: "Next.js", category: "Frameworks", icon: Globe },
     { name: "JavaFX", category: "Frameworks", icon: Smartphone },
     { name: "Firebase", category: "Backend Services", icon: Database },
     { name: "Supabase", category: "Backend Services", icon: Database },
-  ]
+  ];
 
   const projects = [
     {
@@ -178,44 +166,90 @@ export default function Portfolio() {
       description: "Modern restaurant website with online ordering system",
       tech: ["Bootstrap", "React", "TypeScript", "Firebase", "Express.js"],
       image: "/modern-restaurant-website.png",
+      projectlink: "https://restaurant-bootstrap-gamma.vercel.app/",
+      githublink: "https://github.com/casper-zielinski/Restaurant-Bootstrap",
     },
     {
       title: "Issue Tracker",
-      description: "Full-stack issue tracking application for project management",
-      tech: ["Next.js", "React", "TypeScript", "Supabase", "shadcn/ui", "Tailwind CSS"],
+      description:
+        "Full-stack issue tracking application for project management",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "shadcn/ui",
+        "Tailwind CSS",
+      ],
       image: "/issue-tracker-dashboard.png",
+      projectlink: "https://issue-tracker-pearl-alpha.vercel.app/",
+      githublink: "https://github.com/casper-zielinski/Issue-Tracker",
     },
     {
       title: "Social Media App with AI",
       description: "AI-powered social media platform with intelligent features",
-      tech: ["Next.js", "React", "TypeScript", "shadcn/ui", "Tailwind", "Firebase", "Redux"],
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "shadcn/ui",
+        "Tailwind",
+        "Firebase",
+        "Redux",
+      ],
       image: "/ai-social-media-app.png",
+      projectlink: "https://social-media-web-app-weld.vercel.app/",
+      githublink: "https://github.com/casper-zielinski/Social-Media-Web-App",
     },
-  ]
+  ];
+
+  const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div
+      className={`theme-${theme} min-h-screen bg-background text-foreground overflow-x-hidden`}
+    >
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-primary">Casper Zielinski</div>
+            <div
+              className="font-bold text-xl text-primary cursor-pointer"
+              onClick={() => router.push("/#home")}
+            >
+              Casper Zielinski
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#home"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[0]}
               </a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#about"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[1]}
               </a>
-              <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#skills"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[2]}
               </a>
-              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#projects"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[3]}
               </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#contact"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[4]}
               </a>
             </div>
@@ -231,15 +265,28 @@ export default function Portfolio() {
                 <option value="DE">🇩🇪 DE</option>
                 <option value="PL">🇵🇱 PL</option>
               </select>
-              <Button variant="ghost" size="sm" onClick={toggleTheme} title={`Current theme: ${theme}`}>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleTheme}
+                title={`Current theme: ${theme}`}
+              >
                 {getThemeIcon()}
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </Button>
             </div>
           </div>
@@ -312,15 +359,24 @@ export default function Portfolio() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
                   Hi, I'm <span className="text-primary">Casper Zielinski</span>
                 </h1>
-                <p className="text-xl sm:text-2xl text-muted-foreground text-pretty">{t.hero.tagline}</p>
-                <p className="text-lg text-muted-foreground max-w-2xl text-pretty">{t.hero.intro}</p>
+                <p className="text-xl sm:text-2xl text-muted-foreground text-pretty">
+                  {t.hero.tagline}
+                </p>
+                <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
+                  {t.hero.intro}
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild className="text-lg px-8 py-6">
                   <a href="#projects">{t.hero.cta1}</a>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="text-lg px-8 py-6 bg-transparent">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  asChild
+                  className="text-lg px-8 py-6 bg-transparent"
+                >
                   <a href="#contact">{t.hero.cta2}</a>
                 </Button>
               </div>
@@ -345,24 +401,34 @@ export default function Portfolio() {
       <section id="about" className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">{t.about.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+              {t.about.title}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed text-pretty">{t.about.description}</p>
+              <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
+                {t.about.description}
+              </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Student at FH Joanneum</span>
+                  <span className="text-muted-foreground">
+                    Student at FH Joanneum
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Focus on Web & App Development</span>
+                  <span className="text-muted-foreground">
+                    Focus on Web & App Development
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Passionate Problem Solver</span>
+                  <span className="text-muted-foreground">
+                    Passionate Problem Solver
+                  </span>
                 </div>
               </div>
             </div>
@@ -375,7 +441,8 @@ export default function Portfolio() {
                   </div>
                   <h3 className="text-xl font-semibold">Always Learning</h3>
                   <p className="text-muted-foreground text-sm">
-                    Continuously exploring new technologies and best practices in software development.
+                    Continuously exploring new technologies and best practices
+                    in software development.
                   </p>
                 </div>
               </Card>
@@ -388,25 +455,32 @@ export default function Portfolio() {
       <section id="skills" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">{t.skills.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+              {t.skills.title}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => {
-              const Icon = skill.icon
+              const Icon = skill.icon;
               return (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow group">
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg transition-shadow group"
+                >
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold">{skill.name}</h3>
-                      <p className="text-sm text-muted-foreground">{skill.category}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {skill.category}
+                      </p>
                     </div>
                   </div>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -416,12 +490,17 @@ export default function Portfolio() {
       <section id="projects" className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">{t.projects.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+              {t.projects.title}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
+              <Card
+                key={index}
+                className="overflow-hidden hover:shadow-xl transition-shadow group"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
@@ -431,17 +510,37 @@ export default function Portfolio() {
                 </div>
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs">
+                      <Badge
+                        key={techIndex}
+                        variant="secondary"
+                        className="text-xs bg-accent"
+                      >
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="w-full group bg-transparent">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full group bg-transparent"
+                    onClick={() => router.push(project.projectlink)}
+                  >
                     View Project
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full group bg-transparent"
+                    onClick={() => router.push(project.githublink)}
+                  >
+                    View Code
+                    <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </Card>
@@ -454,7 +553,9 @@ export default function Portfolio() {
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">{t.contact.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+              {t.contact.title}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -466,16 +567,32 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">casper.zielinski.work@gmail.com</p>
+                    <p className="text-muted-foreground">
+                      casper.zielinski.work@gmail.com
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex space-x-4">
-                  <Button variant="outline" size="sm">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      router.push("https://github.com/casper-zielinski")
+                    }
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      router.push(
+                        "https://www.linkedin.com/in/casper-zielinski-ab6650348/"
+                      )
+                    }
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </Button>
@@ -486,15 +603,21 @@ export default function Portfolio() {
             <Card className="p-6">
               <form className="space-y-6">
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">{t.contact.form.name}</label>
+                  <label className="text-sm font-medium">
+                    {t.contact.form.name}
+                  </label>
                   <Input placeholder="Your name" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">{t.contact.form.email}</label>
+                  <label className="text-sm font-medium">
+                    {t.contact.form.email}
+                  </label>
                   <Input type="email" placeholder="your.email@example.com" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">{t.contact.form.message}</label>
+                  <label className="text-sm font-medium">
+                    {t.contact.form.message}
+                  </label>
                   <Textarea placeholder="Your message..." rows={5} />
                 </div>
                 <Button type="submit" className="w-full">
@@ -510,9 +633,14 @@ export default function Portfolio() {
       <footer className="bg-muted/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4">
-            <p className="text-muted-foreground">© 2024 Casper Zielinski. All rights reserved.</p>
+            <p className="text-muted-foreground">
+              © 2024 Casper Zielinski. All rights reserved.
+            </p>
             <div className="flex justify-center flex-wrap gap-x-2 gap-y-1 sm:gap-x-4">
-              <a href="#home" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#home"
+                className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 {t.nav[0]}
               </a>
               <a
@@ -544,5 +672,5 @@ export default function Portfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
