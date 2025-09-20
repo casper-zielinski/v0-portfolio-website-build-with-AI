@@ -1,0 +1,84 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
+import router from "next/router";
+import React from "react";
+import { projects } from "../Info";
+import { motion } from "motion/react";
+
+const ProjectsSection = () => {
+  return (
+    <section id="projects" className="py-20 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+            Projects
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.94 }}>
+              <Card
+                key={index}
+                className="overflow-hidden hover:shadow-xl transition-shadow group"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <Badge
+                        key={techIndex}
+                        variant="secondary"
+                        className="text-xs bg-accent dark:bg-primary"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
+                      onClick={() => router.push(project.projectlink)}
+                    >
+                      View Project
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
+                      onClick={() => router.push(project.githublink)}
+                    >
+                      View Code
+                      <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </motion.div>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
