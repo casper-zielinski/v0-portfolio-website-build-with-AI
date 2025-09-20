@@ -6,7 +6,13 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-muted/30 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, translateY: 20 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 1, type: "spring" }}
+        viewport={{ once: true }}
+      >
         <div className="text-center space-y-4">
           <p className="text-muted-foreground">
             © 2024 Casper Zielinski. All rights reserved.
@@ -54,7 +60,7 @@ const Footer = () => {
             </motion.a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

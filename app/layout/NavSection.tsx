@@ -4,16 +4,34 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, X, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import Cookies from "js-cookie";
+
 {
   /* Navigation */
 }
 const NavSection = () => {
   const { theme, setTheme, systemTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
+  const toggle = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    Cookies.set("theme", next, { expires: 365, sameSite: "lax" });
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    // optional: synchronisiere cookie wenn theme initialisiert wird
+    if (theme) Cookies.set("theme", theme, { expires: 365, sameSite: "lax" });
+  }, [theme]);
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -21,7 +39,7 @@ const NavSection = () => {
         <div className="flex justify-between items-center h-16">
           <motion.div
             className="font-bold text-xl text-primary cursor-pointer hover:bg-gray-300 hover:shadow dark:hover:bg-accent p-2 rounded"
-            whileHover={{scale: 1.1}}
+            whileHover={{ scale: 1.1 }}
             onClick={() => router.push("/#home")}
           >
             Casper Zielinski
@@ -79,13 +97,19 @@ const NavSection = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() =>
-                  setTheme((prev) => (prev === "dark" ? "light" : "dark"))
-                }
+                onClick={toggle}
                 title={`Current theme: ${theme}`}
                 className="text-black dark:text-white cursor-pointer"
               >
-                {currentTheme === "dark" ? <Moon /> : <Sun />}
+                {mounted ? (
+                  currentTheme === "dark" ? (
+                    <Moon />
+                  ) : (
+                    <Sun />
+                  )
+                ) : (
+                  <div className="rounded-4xl bg-accent animate-pulse w-6 h-6" />
+                )}
               </Button>
             </motion.div>
           </div>
@@ -155,17 +179,27 @@ const NavSection = () => {
             >
               Contact
             </motion.a>
-            <motion.div className="flex items-center justify-between px-3 py-2" whileHover={{translateY: -3.5}} whileTap={{scale: 1.01}}>
+            <motion.div
+              className="flex items-center justify-between px-3 py-2"
+              whileHover={{ translateY: -3.5 }}
+              whileTap={{ scale: 1.01 }}
+            >
               <Button
                 variant="ghost"
                 size="sm"
                 className="border cursor-pointer"
-                onClick={() =>
-                  setTheme((prev) => (prev === "dark" ? "light" : "dark"))
-                }
+                onClick={toggle}
                 title={`Current theme: ${theme}`}
               >
-                {currentTheme === "dark" ? <Moon /> : <Sun />}
+                {mounted ? (
+                  currentTheme === "dark" ? (
+                    <Moon />
+                  ) : (
+                    <Sun />
+                  )
+                ) : (
+                  <div className="rounded-4xl bg-accent animate-pulse w-6 h-6" />
+                )}
               </Button>
             </motion.div>
           </div>
