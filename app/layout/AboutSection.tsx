@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Code } from "lucide-react";
 import { motion, useInView } from "motion/react";
@@ -8,7 +9,7 @@ import React, { useRef } from "react";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             className="text-3xl sm:text-4xl font-bold mb-4 text-balance"
@@ -49,6 +50,25 @@ const AboutSection = () => {
                 </span>
               </div>
             </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ type: "spring" }}
+            >
+              <Button
+                variant="outline"
+                size="default"
+                asChild
+                className="text-lg px-8 py-6 bg-transparent"
+              >
+                <a
+                  href="/Lebenslauf_Zielinski_Casper_02.pdf"
+                  download="Casper_Zielinski_CV.pdf"
+                >
+                  Download CV
+                </a>
+              </Button>
+            </motion.div>
           </div>
 
           <motion.div

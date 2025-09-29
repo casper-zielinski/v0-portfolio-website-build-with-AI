@@ -5,11 +5,13 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin } from "lucide-react";
-import { motion, spring } from "motion/react";
-import router from "next/router";
+import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ContactSection = () => {
+  const router = useRouter();
+
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

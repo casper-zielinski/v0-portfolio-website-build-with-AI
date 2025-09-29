@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { projects } from "../Info";
 import { motion } from "motion/react";
 
 const ProjectsSection = () => {
+  const router = useRouter();
+
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
