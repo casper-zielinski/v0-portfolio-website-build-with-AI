@@ -42,7 +42,11 @@ const ProjectsSection = () => {
               viewport={{ once: true }}
               key={index}
             >
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
+              <Card
+                className={`overflow-hidden hover:shadow-xl transition-shadow group ${
+                  index === 1 && "bg-white/10 dark:bg-black scale-101 md:scale-105 lg:scale-110"
+                }`}
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}

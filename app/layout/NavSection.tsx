@@ -21,7 +21,7 @@ const NavSection = () => {
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
-    Cookies.set("theme", next, { expires: 365, sameSite: "lax" });
+    Cookies.set("theme", next, { expires: 365, sameSite: "Lax" });
   };
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const NavSection = () => {
 
   useEffect(() => {
     // optional: synchronisiere cookie wenn theme initialisiert wird
-    if (theme) Cookies.set("theme", theme, { expires: 365, sameSite: "lax" });
+    if (theme) Cookies.set("theme", theme, { expires: 365, sameSite: "Lax" });
   }, [theme]);
 
   return (

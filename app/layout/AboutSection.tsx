@@ -25,10 +25,11 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-xl leading-relaxed text-pretty">
-              I am a dedicated Computer Science student at FH Joanneum with a
-              passion for web and app development. I enjoy solving complex
-              problems and creating user-friendly applications that make a
-              difference.
+              I am a dedicated Mobile Software Development student at FH
+              Joanneum with a passion for web and app development. I enjoy
+              creating responsive applications with robust functionality—from
+              building full-stack features and database integration to
+              implementing APIs and routing systems.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
