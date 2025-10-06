@@ -63,7 +63,7 @@ const AboutSection = () => {
                 className="text-lg px-8 py-6 bg-transparent"
               >
                 <a
-                  href="/Lebenslauf_Zielinski_Casper_02.pdf"
+                  href="/Casper_Daniel_Zielinski_Lebenslauf.pdf"
                   download="Casper_Zielinski_CV.pdf"
                 >
                   Download CV
