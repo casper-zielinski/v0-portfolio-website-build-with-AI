@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my skills as an aspiring developer studying at FH Joanneum. Built with cutting-edge web technologies and designed with user experience in mind.
 
-🌐 **Live Demo:** [View Portfolio](https://v0-portfolio-website-build-xi.vercel.app/)
+🌐 **Live Demo:** [View Portfolio](https://casperzielinski-portfolio.vercel.app/)
 
 ![Portfolio Preview](./public/Portfolio-Website.png)
 
