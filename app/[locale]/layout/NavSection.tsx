@@ -8,6 +8,15 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+} from "@radix-ui/react-dropdown-menu";
 
 {
   /* Navigation */
@@ -16,6 +25,7 @@ const NavSection = () => {
   const { theme, setTheme, systemTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [language, setLanguage] = useState("");
   const router = useRouter();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const t = useTranslations("navigation");
@@ -34,6 +44,11 @@ const NavSection = () => {
     // optional: synchronisiere cookie wenn theme initialisiert wird
     if (theme) Cookies.set("theme", theme, { expires: 365, sameSite: "Lax" });
   }, [theme]);
+
+  function setLanguagePage(path: string) {
+    setLanguage(path);
+    router.push(path);
+  }
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -57,7 +72,7 @@ const NavSection = () => {
               href="#home"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              {t("Home")}
+              {t("home")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -114,6 +129,34 @@ const NavSection = () => {
                 )}
               </Button>
             </motion.div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="ml-3">
+                  Open
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 ml-2 mt-0.5 bg-muted rounded-lg border border-gray-500 shadow">
+                <DropdownMenuLabel className="font-bold border-b border-gray-500 p-2">
+                  Select Language
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup
+                  value={language}
+                  onValueChange={(e) => setLanguagePage(e)}
+                  className="p-2"
+                >
+                  <DropdownMenuRadioItem value="/de">
+                    Deutsch
+                  </DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="/en">
+                    English
+                  </DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="/pl">
+                    Polski
+                  </DropdownMenuRadioItem>
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile Menu Button */}
@@ -204,6 +247,34 @@ const NavSection = () => {
                 )}
               </Button>
             </motion.div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="ml-3">
+                  Open
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 ml-2 mt-0.5 bg-muted rounded-lg border border-gray-500 shadow">
+                <DropdownMenuLabel className="font-bold border-b border-gray-500 p-2">
+                  Select Language
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup
+                  value={language}
+                  onValueChange={(e) => setLanguagePage(e)}
+                  className="p-2"
+                >
+                  <DropdownMenuRadioItem value="/de">
+                    Deutsch
+                  </DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="/en">
+                    English
+                  </DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="/pl">
+                    Polski
+                  </DropdownMenuRadioItem>
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       )}

@@ -2,10 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader } from "@/components/ui/card";
-import { Code } from "lucide-react";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 
 const AboutSection = () => {
   return (

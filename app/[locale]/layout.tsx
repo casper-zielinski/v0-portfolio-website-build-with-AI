@@ -6,13 +6,18 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
+import { locales } from "@/i18n/request";
 
 export const metadata: Metadata = {
   title: "Caspers Portfolio",
   description: "Casper Zielinskis Portfolio Created with v0",
   generator: "v0.app",
 };
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 type Props = {
   children: React.ReactNode;
@@ -21,9 +26,13 @@ type Props = {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
+  
+  if (!locales.includes(locale as any)) {
     notFound();
   }
+
+  setRequestLocale(locale);
+
   return (
     <html lang="en" suppressHydrationWarning className="scrollbar-hide">
       <body
