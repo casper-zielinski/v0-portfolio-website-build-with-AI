@@ -9,13 +9,12 @@ import Footer from "./layout/Footer";
 export default function Portfolio() {
   return (
     <div
-      className={`min-h-screen bg-background overflow-x-hidden text-black dark:text-white`}
+      className="scrollbar-hide min-h-screen bg-background overflow-x-hidden text-black dark:text-white"
     >
       {/* Nav Section */}
       <NavSection />
       {/* Hero Section */}
       <Herosection />
-
       {/* About Section */}
       <AboutSection />
 

@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardHeader } from "@/components/ui/card";
 import { Code } from "lucide-react";
 import { motion, useInView } from "motion/react";
+import Image from "next/image";
 import React, { useRef } from "react";
 
 const AboutSection = () => {
@@ -73,24 +74,23 @@ const AboutSection = () => {
           </div>
 
           <motion.div
-            className="hidden md:flex justify-center"
+            className="flex justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.07 }}
             transition={{ scale: { duration: 0.3 }, opacity: { duration: 1 } }}
           >
-            <Card className="p-8 max-w-sm hover:shadow-2xl">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Code className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Always Learning</h3>
-                <p className="text-muted-foreground text-sm">
-                  Continuously exploring new technologies and best practices in
-                  software development.
-                </p>
-              </div>
+            <Card className="p-3 max-w-sm hover:shadow-2xl md:scale-110 lg:scale-125">
+              <CardHeader className="text-center font-bold">My Github Contributions</CardHeader>
+              <Image
+                src={
+                  "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg"
+                }
+                alt="Github Contributions with Snake"
+                width={4000}
+                height={4000}
+              />
             </Card>
           </motion.div>
         </div>

@@ -98,7 +98,7 @@ const NavSection = () => {
                 variant="ghost"
                 size="sm"
                 onClick={toggle}
-                title={`Current theme: ${theme}`}
+                title="Theme-Switcher"
                 className="text-black dark:text-white cursor-pointer"
               >
                 {mounted ? (
