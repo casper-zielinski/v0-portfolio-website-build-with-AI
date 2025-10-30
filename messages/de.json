@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hi, ich bin",
+    "name": "Casper Zielinski",
+    "title": "Web Developer",
+    "description": "Mobile Software Development Student an der FH Joanneum mit Leidenschaft für innovative Webanwendungen mit Next.js und React",
+    "viewProjects": "Projekte ansehen",
+    "contactMe": "Kontaktiere mich",
+    "scrollDown": "Nach unten scrollen"
+  },
+  "about": {
+    "title": "Über mich",
+    "paragraph1": "Ich bin ein leidenschaftlicher Entwickler, der derzeit Mobile Software Development an der FH Joanneum studiert. Meine Reise in der Webentwicklung begann mit einem tiefen Interesse an der Erstellung benutzerfreundlicher und optisch ansprechender Anwendungen.",
+    "paragraph2": "Ich habe Erfahrung mit modernen Web-Technologien wie React, Next.js, TypeScript und verschiedenen Backend-Lösungen. Ich konzentriere mich auf die Erstellung reaktionsfähiger, zugänglicher und performanter Webanwendungen.",
+    "yearsExperience": "Jahre Erfahrung",
+    "projectsCompleted": "Abgeschlossene Projekte",
+    "techStack": "Technologie-Stack"
+  },
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "description": "Hier ist eine Übersicht der Technologien und Tools, mit denen ich arbeite",
+    "programmingLanguages": "Programmiersprachen",
+    "queryLanguages": "Abfragesprachen",
+    "libraries": "Bibliotheken",
+    "frameworks": "Frameworks",
+    "backendServices": "Backend-Dienste"
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "description": "Eine Auswahl meiner neuesten Arbeiten und Projekte",
+    "viewProject": "Projekt ansehen",
+    "viewCode": "Code ansehen",
+    "technologies": "Technologien",
+    "restaurantWebsite": {
+      "title": "Restaurant-Website",
+      "description": "Moderne Restaurant-Landingpage mit interaktivem Menü, Reservierungssystem, Standortkarte und Kontaktformularen"
+    },
+    "socialMediaApp": {
+      "title": "Social Media App mit KI",
+      "description": "Interaktive Social-Plattform mit Echtzeit-Posts, Kommentaren, verschachtelten Antworten und Live-Like-Updates. Mit Authentifizierung und Gast-Login"
+    },
+    "issueTracker": {
+      "title": "Issue Tracker",
+      "description": "Projektmanagement-Tool zum Verfolgen von Issues, Bugs und Aufgaben mit Statusverwaltung, Prioritätsstufen und Benutzerzuweisungen"
+    }
+  },
+  "contact": {
+    "title": "Kontaktiere mich",
+    "description": "Lass uns zusammenarbeiten! Nimm Kontakt auf für Projekte oder Fragen.",
+    "email": "E-Mail",
+    "emailPlaceholder": "deine.email@beispiel.de",
+    "name": "Name",
+    "namePlaceholder": "Dein Name",
+    "message": "Nachricht",
+    "messagePlaceholder": "Deine Nachricht hier...",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuche es erneut."
+  },
+  "footer": {
+    "builtWith": "Erstellt mit",
+    "by": "von",
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Ein Fehler ist aufgetreten",
+    "theme": "Thema",
+    "currentTheme": "Aktuelles Thema"
+  }
+}

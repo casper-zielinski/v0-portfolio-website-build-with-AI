@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Casper Zielinski",
+    "title": "Web Developer",
+    "description": "Mobile Software Development student at FH Joanneum passionate about creating innovative web applications using Next.js and React",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a passionate developer currently studying Mobile Software Development at FH Joanneum. My journey in web development started with a deep interest in creating user-friendly and visually appealing applications.",
+    "paragraph2": "I have experience with modern web technologies like React, Next.js, TypeScript, and various backend solutions. I focus on creating responsive, accessible, and performant web applications.",
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "techStack": "Tech Stack"
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "Here's an overview of the technologies and tools I work with",
+    "programmingLanguages": "Programming Languages",
+    "queryLanguages": "Query Languages",
+    "libraries": "Libraries",
+    "frameworks": "Frameworks",
+    "backendServices": "Backend Services"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "A selection of my recent work and projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "technologies": "Technologies",
+    "restaurantWebsite": {
+      "title": "Restaurant Website",
+      "description": "Modern restaurant landing page with interactive menu, reservation system, location map, and contact forms"
+    },
+    "socialMediaApp": {
+      "title": "Social Media App with AI",
+      "description": "Interactive social platform with real-time posts, comments, nested replies, and live like updates. Features authentication and guest login"
+    },
+    "issueTracker": {
+      "title": "Issue Tracker",
+      "description": "Project management tool for tracking issues, bugs, and tasks with status management, priority levels, and user assignments"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Let's work together! Get in touch for projects or inquiries.",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "name": "Name",
+    "namePlaceholder": "Your Name",
+    "message": "Message",
+    "messagePlaceholder": "Your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "footer": {
+    "builtWith": "Built with",
+    "by": "by",
+    "allRightsReserved": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "theme": "Theme",
+    "currentTheme": "Current theme"
+  }
+}
