@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Cookies from "js-cookie";
+import { useTranslations } from "next-intl";
 
 {
   /* Navigation */
@@ -17,6 +18,7 @@ const NavSection = () => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const currentTheme = theme === "system" ? systemTheme : theme;
+  const t = useTranslations("navigation");
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
@@ -55,7 +57,7 @@ const NavSection = () => {
               href="#home"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              Home
+              {t("Home")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}

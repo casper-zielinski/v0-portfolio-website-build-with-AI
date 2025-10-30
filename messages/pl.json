@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem",
+    "name": "Casper Zielinski",
+    "title": "Web Developer",
+    "description": "Student Mobile Software Development na FH Joanneum z pasją do tworzenia innowacyjnych aplikacji webowych przy użyciu Next.js i React",
+    "viewProjects": "Zobacz projekty",
+    "contactMe": "Skontaktuj się",
+    "scrollDown": "Przewiń w dół"
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraph1": "Jestem pasjonatem programowania, obecnie studiuję Mobile Software Development na FH Joanneum. Moja przygoda z tworzeniem stron internetowych rozpoczęła się od głębokiego zainteresowania tworzeniem przyjaznych użytkownikowi i atrakcyjnych wizualnie aplikacji.",
+    "paragraph2": "Mam doświadczenie z nowoczesnymi technologiami webowymi, takimi jak React, Next.js, TypeScript i różnymi rozwiązaniami backendowymi. Skupiam się na tworzeniu responsywnych, dostępnych i wydajnych aplikacji webowych.",
+    "yearsExperience": "Lat doświadczenia",
+    "projectsCompleted": "Ukończone projekty",
+    "techStack": "Stack technologiczny"
+  },
+  "skills": {
+    "title": "Moje umiejętności",
+    "description": "Oto przegląd technologii i narzędzi, z którymi pracuję",
+    "programmingLanguages": "Języki programowania",
+    "queryLanguages": "Języki zapytań",
+    "libraries": "Biblioteki",
+    "frameworks": "Frameworki",
+    "backendServices": "Usługi backendowe"
+  },
+  "projects": {
+    "title": "Moje projekty",
+    "description": "Wybór moich najnowszych prac i projektów",
+    "viewProject": "Zobacz projekt",
+    "viewCode": "Zobacz kod",
+    "technologies": "Technologie",
+    "restaurantWebsite": {
+      "title": "Strona restauracji",
+      "description": "Nowoczesna strona docelowa restauracji z interaktywnym menu, systemem rezerwacji, mapą lokalizacji i formularzami kontaktowymi"
+    },
+    "socialMediaApp": {
+      "title": "Aplikacja mediów społecznościowych z AI",
+      "description": "Interaktywna platforma społecznościowa z postami w czasie rzeczywistym, komentarzami, zagnieżdżonymi odpowiedziami i aktualizacjami polubień na żywo. Z uwierzytelnianiem i logowaniem gościa"
+    },
+    "issueTracker": {
+      "title": "Tracker problemów",
+      "description": "Narzędzie do zarządzania projektami do śledzenia problemów, błędów i zadań z zarządzaniem statusem, poziomami priorytetów i przypisaniami użytkowników"
+    }
+  },
+  "contact": {
+    "title": "Skontaktuj się ze mną",
+    "description": "Współpracujmy razem! Skontaktuj się w sprawie projektów lub zapytań.",
+    "email": "Email",
+    "emailPlaceholder": "twoj.email@przyklad.pl",
+    "name": "Imię",
+    "namePlaceholder": "Twoje imię",
+    "message": "Wiadomość",
+    "messagePlaceholder": "Twoja wiadomość tutaj...",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłanie...",
+    "success": "Wiadomość została wysłana pomyślnie!",
+    "error": "Błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+  },
+  "footer": {
+    "builtWith": "Zbudowane z",
+    "by": "przez",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "theme": "Motyw",
+    "currentTheme": "Obecny motyw"
+  }
+}
