@@ -5,9 +5,11 @@ import { ChevronDownIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Herosection = () => {
   const router = useRouter();
+  const t = useTranslations("hero");
 
   return (
     <section
@@ -24,15 +26,13 @@ const Herosection = () => {
               transition={{ duration: 1 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
-                Hi, I'm <span className="text-primary">Casper Zielinski</span>
+                {t("greeting")} <span className="text-primary">{t("name")}</span>
               </h1>
               <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-200 font-semibold text-pretty">
-                Web Developer
+                {t("title")}
               </p>
               <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-                Mobile Software Development student at FH Joanneum passionate
-                about creating innovative web applications using Next.js and
-                React
+                {t("description")}
               </p>
             </motion.div>
 
@@ -44,7 +44,7 @@ const Herosection = () => {
                 transition={{ type: "spring" }}
               >
                 <Button size="lg" asChild className="text-lg px-8 py-6">
-                  <a href="#projects">View Projects</a>
+                  <a href="#projects">{t("viewProjects")}</a>
                 </Button>
               </motion.div>
               <motion.div
@@ -59,7 +59,7 @@ const Herosection = () => {
                       router.push("https://github.com/casper-zielinski")
                     }
                   >
-                    View Github
+                    {t("viewGithub")}
                   </p>
                 </Button>
               </motion.div>
@@ -75,7 +75,7 @@ const Herosection = () => {
                   asChild
                   className="text-lg px-8 py-6 bg-transparent"
                 >
-                  <a href="#contact">Contact Me</a>
+                  <a href="#contact">{t("contactMe")}</a>
                 </Button>
               </motion.div>
             </div>

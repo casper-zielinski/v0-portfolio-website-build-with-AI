@@ -4,7 +4,9 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openLanguageMenu": "🇬🇧 Open",
+    "selectLanguage": "Select Language"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -12,6 +14,7 @@
     "title": "Web Developer",
     "description": "Mobile Software Development student at FH Joanneum passionate about creating innovative web applications using Next.js and React",
     "viewProjects": "View Projects",
+    "viewGithub": "View Github",
     "contactMe": "Contact Me",
     "scrollDown": "Scroll Down"
   },
@@ -19,6 +22,13 @@
     "title": "About Me",
     "paragraph1": "I'm a passionate developer currently studying Mobile Software Development at FH Joanneum. My journey in web development started with a deep interest in creating user-friendly and visually appealing applications.",
     "paragraph2": "I have experience with modern web technologies like React, Next.js, TypeScript, and various backend solutions. I focus on creating responsive, accessible, and performant web applications.",
+    "description": "I am a dedicated Mobile Software Development student at FH Joanneum with a passion for web and app development. I enjoy creating responsive applications with robust functionality—from building full-stack features and database integration to implementing APIs and routing systems.",
+    "student": "Student at FH Joanneum",
+    "focus": "Focus on Web & App Development",
+    "problemSolver": "Passionate Problem Solver",
+    "downloadCV": "Download CV",
+    "githubContributions": "My Github Contributions",
+    "githubContributionsSecondary": "Here you can see my GitHub Contribution Activity",
     "yearsExperience": "Years Experience",
     "projectsCompleted": "Projects Completed",
     "techStack": "Tech Stack"
@@ -68,7 +78,8 @@
   "footer": {
     "builtWith": "Built with",
     "by": "by",
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "copyright": "© 2024 Casper Zielinski. All rights reserved."
   },
   "common": {
     "loading": "Loading...",

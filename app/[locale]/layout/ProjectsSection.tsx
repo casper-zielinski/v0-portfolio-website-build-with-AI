@@ -8,9 +8,11 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { projects } from "../Info";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const ProjectsSection = () => {
   const router = useRouter();
+  const t = useTranslations("projects");
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -23,7 +25,7 @@ const ProjectsSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Projects
+            {t("title")}
           </motion.h2>
         </div>
 
@@ -77,7 +79,7 @@ const ProjectsSection = () => {
                       className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
                       onClick={() => router.push(project.projectlink)}
                     >
-                      View Project
+                      {t("viewProject")}
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </motion.div>
@@ -88,7 +90,7 @@ const ProjectsSection = () => {
                       className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
                       onClick={() => router.push(project.githublink)}
                     >
-                      View Code
+                      {t("viewCode")}
                       <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </motion.div>

@@ -7,10 +7,74 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import emailjs from "@emailjs/browser";
+import { Slide, toast } from "react-toastify";
 
 const ContactSection = () => {
   const router = useRouter();
+  const t = useTranslations("contact");
+  const form = useRef(null);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const invalidForm =
+    !(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) ||
+    !name ||
+    !message;
+
+  const clearForm = () => {
+    setEmail("");
+    setMessage("");
+    setName("");
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then(
+        (response) => {
+          toast.success("Message send", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Slide,
+          });
+          form.reset();
+          clearForm();
+        },
+        (error) => {
+          toast.error("Error sending message!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Slide,
+          });
+          console.log("FAILED...", error);
+        }
+      );
+  };
 
   return (
     <section id="contact" className="py-20">
@@ -23,7 +87,7 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Contact
+            {t("title")}
           </motion.h2>
         </div>
 
@@ -44,7 +108,7 @@ const ContactSection = () => {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email</h3>
+                  <h3 className="font-semibold">{t("email")}</h3>
                   <p className="text-muted-foreground">
                     casper.zielinski.work@gmail.com
                   </p>
@@ -93,23 +157,49 @@ const ContactSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <Card className="p-5">
-              <form className="space-y-6">
+            <Card className="p-5 hover:shadow-2xl focus:shadow-2xl">
+              <form
+                className="space-y-6"
+                id="contactForm"
+                onSubmit={sendEmail}
+                ref={form}
+              >
                 <div className="space-y-6">
-                  <label className="text-sm font-medium">Name</label>
-                  <Input placeholder="Your name" />
+                  <label className="text-sm font-medium">{t("name")}</label>
+                  <Input
+                    placeholder={t("namePlaceholder")}
+                    name="name"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                  />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">Email</label>
-                  <Input type="email" placeholder="your.email@example.com" />
+                  <label className="text-sm font-medium">{t("email")}</label>
+                  <Input
+                    type="email"
+                    placeholder={t("emailPlaceholder")}
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                  />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">Message</label>
-                  <Textarea placeholder="Your message..." rows={5} />
+                  <label className="text-sm font-medium">{t("message")}</label>
+                  <Textarea
+                    placeholder={t("messagePlaceholder")}
+                    rows={5}
+                    name="message"
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
+                  />
                 </div>
                 <motion.div whileHover={{ scale: 1.02 }}>
-                  <Button type="submit" className="w-full cursor-pointer">
-                    Send
+                  <Button
+                    type="submit"
+                    className="w-full cursor-pointer"
+                    disabled={invalidForm}
+                  >
+                    {t("send")}
                   </Button>
                 </motion.div>
               </form>

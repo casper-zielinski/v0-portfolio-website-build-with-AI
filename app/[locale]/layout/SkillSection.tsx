@@ -4,8 +4,10 @@ import { Card } from "@/components/ui/card";
 import React from "react";
 import { skills } from "../Info";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const SkillSection = () => {
+  const t = useTranslations("skills");
   return (
     <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +19,7 @@ const SkillSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Skills & Technologies
+            {t("title")}
           </motion.h2>
         </div>
 

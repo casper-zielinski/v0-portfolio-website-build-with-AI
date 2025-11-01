@@ -1,12 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const AboutSection = () => {
+  const t = useTranslations("about");
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,36 +20,28 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            About
+            {t("title")}
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-xl leading-relaxed text-pretty">
-              I am a dedicated Mobile Software Development student at FH
-              Joanneum with a passion for web and app development. I enjoy
-              creating responsive applications with robust functionality—from
-              building full-stack features and database integration to
-              implementing APIs and routing systems.
+              {t("description")}
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">
-                  Student at FH Joanneum
-                </span>
+                <span className="text-muted-foreground">{t("student")}</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-muted-foreground">{t("focus")}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span className="text-muted-foreground">
-                  Focus on Web & App Development
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">
-                  Passionate Problem Solver
+                  {t("problemSolver")}
                 </span>
               </div>
             </div>
@@ -66,7 +60,7 @@ const AboutSection = () => {
                   href="/Casper_Daniel_Zielinski_Lebenslauf.pdf"
                   download="Casper_Zielinski_CV.pdf"
                 >
-                  Download CV
+                  {t("downloadCV")}
                 </a>
               </Button>
             </motion.div>
@@ -77,19 +71,25 @@ const AboutSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.07 }}
+            whileHover={{ scale: 1.01 }}
             transition={{ scale: { duration: 0.3 }, opacity: { duration: 1 } }}
           >
-            <Card className="p-3 max-w-sm hover:shadow-2xl md:scale-110 lg:scale-125">
-              <CardHeader className="text-center font-bold">My Github Contributions</CardHeader>
-              <Image
-                src={
-                  "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg"
-                }
-                alt="Github Contributions with Snake"
-                width={4000}
-                height={4000}
-              />
+            <Card className="p-3 pb-5 max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl md:scale-110 lg:scale-125 xl:scale-150">
+              <CardHeader >
+                <p className="text-center font-bold">{t("githubContributions")}</p>
+                <p className="text-center text-sm text-gray-400">{t("githubContributionsSecondary")}</p>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={
+                    "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg"
+                  }
+                  alt="Github Contributions with Snake"
+                  width={4000}
+                  height={4000}
+                  className="scale-125 md:scale-y-150 p-1 rounded-2xl"
+                />
+              </CardContent>
             </Card>
           </motion.div>
         </div>

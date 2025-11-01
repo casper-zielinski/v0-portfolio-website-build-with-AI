@@ -4,7 +4,9 @@
     "about": "O mnie",
     "skills": "Umiejętności",
     "projects": "Projekty",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "openLanguageMenu": "🇵🇱 Otwórz",
+    "selectLanguage": "Wybierz język"
   },
   "hero": {
     "greeting": "Cześć, jestem",
@@ -12,6 +14,7 @@
     "title": "Web Developer",
     "description": "Student Mobile Software Development na FH Joanneum z pasją do tworzenia innowacyjnych aplikacji webowych przy użyciu Next.js i React",
     "viewProjects": "Zobacz projekty",
+    "viewGithub": "Zobacz Github",
     "contactMe": "Skontaktuj się",
     "scrollDown": "Przewiń w dół"
   },
@@ -19,6 +22,13 @@
     "title": "O mnie",
     "paragraph1": "Jestem pasjonatem programowania, obecnie studiuję Mobile Software Development na FH Joanneum. Moja przygoda z tworzeniem stron internetowych rozpoczęła się od głębokiego zainteresowania tworzeniem przyjaznych użytkownikowi i atrakcyjnych wizualnie aplikacji.",
     "paragraph2": "Mam doświadczenie z nowoczesnymi technologiami webowymi, takimi jak React, Next.js, TypeScript i różnymi rozwiązaniami backendowymi. Skupiam się na tworzeniu responsywnych, dostępnych i wydajnych aplikacji webowych.",
+    "description": "Jestem oddanym studentem Mobile Software Development na FH Joanneum z pasją do tworzenia aplikacji webowych i mobilnych. Lubię tworzyć responsywne aplikacje z solidną funkcjonalnością—od budowania funkcji full-stack i integracji baz danych po implementację API i systemów routingu.",
+    "student": "Student na FH Joanneum",
+    "focus": "Skupienie na rozwoju Web & App",
+    "problemSolver": "Pasjonat rozwiązywania problemów",
+    "downloadCV": "Pobierz CV",
+    "githubContributions": "Moje wkłady na Github",
+    "githubContributionsSecondary": "Tutaj możesz zobaczyć moją aktywność w GitHub",
     "yearsExperience": "Lat doświadczenia",
     "projectsCompleted": "Ukończone projekty",
     "techStack": "Stack technologiczny"
@@ -68,7 +78,8 @@
   "footer": {
     "builtWith": "Zbudowane z",
     "by": "przez",
-    "allRightsReserved": "Wszelkie prawa zastrzeżone"
+    "allRightsReserved": "Wszelkie prawa zastrzeżone",
+    "copyright": "© 2024 Casper Zielinski. Wszelkie prawa zastrzeżone."
   },
   "common": {
     "loading": "Ładowanie...",

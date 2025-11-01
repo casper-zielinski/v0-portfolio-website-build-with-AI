@@ -16,7 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-} from "@radix-ui/react-dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 
 {
   /* Navigation */
@@ -57,6 +57,7 @@ const NavSection = () => {
           <motion.div
             className="font-bold text-xl text-primary cursor-pointer hover:bg-gray-300 hover:shadow dark:hover:bg-accent p-2 rounded"
             whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => router.push("/#home")}
           >
             Casper Zielinski
@@ -80,7 +81,7 @@ const NavSection = () => {
               href="#about"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              About
+              {t("about")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -88,7 +89,7 @@ const NavSection = () => {
               href="#skills"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              Skills
+              {t("skills")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -96,7 +97,7 @@ const NavSection = () => {
               href="#projects"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              Projects
+              {t("projects")}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -104,7 +105,7 @@ const NavSection = () => {
               href="#contact"
               className="text-muted-foreground hover:text-primary transition-color"
             >
-              Contact
+              {t("contact")}
             </motion.a>
           </div>
 
@@ -131,27 +132,22 @@ const NavSection = () => {
             </motion.div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="ml-3">
-                  Open
-                </Button>
+                <Button variant="outline">{t("openLanguageMenu")}</Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 ml-2 mt-0.5 bg-muted rounded-lg border border-gray-500 shadow">
-                <DropdownMenuLabel className="font-bold border-b border-gray-500 p-2">
-                  Select Language
-                </DropdownMenuLabel>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>{t("selectLanguage")}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuRadioGroup
                   value={language}
                   onValueChange={(e) => setLanguagePage(e)}
-                  className="p-2"
                 >
-                  <DropdownMenuRadioItem value="/de">
+                  <DropdownMenuRadioItem value="/de" className="cursor-pointer">
                     Deutsch
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="/en">
+                  <DropdownMenuRadioItem value="/en" className="cursor-pointer">
                     English
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="/pl">
+                  <DropdownMenuRadioItem value="/pl" className="cursor-pointer">
                     Polski
                   </DropdownMenuRadioItem>
                 </DropdownMenuRadioGroup>
@@ -190,7 +186,7 @@ const NavSection = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-color"
             >
-              Home
+              {t("home")}
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
@@ -198,7 +194,7 @@ const NavSection = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              About
+              {t("about")}
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
@@ -206,7 +202,7 @@ const NavSection = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              Skills
+              {t("skills")}
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
@@ -214,7 +210,7 @@ const NavSection = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              Projects
+              {t("projects")}
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
@@ -222,7 +218,7 @@ const NavSection = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              Contact
+              {t("contact")}
             </motion.a>
             <motion.div
               className="flex items-center justify-between px-3 py-2"
@@ -249,27 +245,23 @@ const NavSection = () => {
             </motion.div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="ml-3">
-                  Open
-                </Button>
+                <Button variant="outline">{t("openLanguageMenu")}</Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 ml-2 mt-0.5 bg-muted rounded-lg border border-gray-500 shadow">
-                <DropdownMenuLabel className="font-bold border-b border-gray-500 p-2">
-                  Select Language
-                </DropdownMenuLabel>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>{t("selectLanguage")}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuRadioGroup
                   value={language}
                   onValueChange={(e) => setLanguagePage(e)}
                   className="p-2"
                 >
-                  <DropdownMenuRadioItem value="/de">
+                  <DropdownMenuRadioItem value="/de" className="cursor-pointer">
                     Deutsch
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="/en">
+                  <DropdownMenuRadioItem value="/en" className="cursor-pointer">
                     English
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="/pl">
+                  <DropdownMenuRadioItem value="/pl" className="cursor-pointer">
                     Polski
                   </DropdownMenuRadioItem>
                 </DropdownMenuRadioGroup>
