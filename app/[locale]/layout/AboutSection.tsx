@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { motion } from "motion/react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useThemeContext } from "../hooks/ThemeProviderContext";
 
 const AboutSection = () => {
   const t = useTranslations("about");
+  const { getCurrentTheme, mounted } = useThemeContext();
+
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,20 +77,26 @@ const AboutSection = () => {
             whileHover={{ scale: 1.01 }}
             transition={{ scale: { duration: 0.3 }, opacity: { duration: 1 } }}
           >
-            <Card className="p-3 pb-5 max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl md:scale-110 lg:scale-125 xl:scale-150">
-              <CardHeader >
-                <p className="text-center font-bold">{t("githubContributions")}</p>
-                <p className="text-center text-sm text-gray-400">{t("githubContributionsSecondary")}</p>
+            <Card className="p-0 pt-7 dark:bg-black bg-white max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl md:scale-110 lg:scale-125">
+              <CardHeader>
+                <p className="text-center font-bold">{"Most Used Languages"}</p>
+                <p className="text-center text-sm text-gray-400">
+                  {"Programming Languages I use the most"}
+                </p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-0 pb-0 pt-0">
                 <Image
                   src={
-                    "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg"
+                    mounted
+                      ? getCurrentTheme() === "dark"
+                        ? "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
+                        : "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
+                      : "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
                   }
                   alt="Github Contributions with Snake"
-                  width={4000}
-                  height={4000}
-                  className="scale-125 md:scale-y-150 p-1 rounded-2xl"
+                  width={350}
+                  height={350}
+                  className={`translate-y-1 scale-x-101 rounded border-1 dark:border-0 border-primary`}
                 />
               </CardContent>
             </Card>

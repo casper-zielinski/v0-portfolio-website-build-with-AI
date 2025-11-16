@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, X, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Cookies from "js-cookie";
 import { useTranslations } from "next-intl";
@@ -17,33 +17,20 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu";
+import ThemeProviderContext, {
+  useThemeContext,
+} from "@/app/[locale]/hooks/ThemeProviderContext";
 
 {
   /* Navigation */
 }
 const NavSection = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [language, setLanguage] = useState("");
   const router = useRouter();
-  const currentTheme = theme === "system" ? systemTheme : theme;
   const t = useTranslations("navigation");
 
-  const toggle = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    Cookies.set("theme", next, { expires: 365, sameSite: "Lax" });
-  };
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    // optional: synchronisiere cookie wenn theme initialisiert wird
-    if (theme) Cookies.set("theme", theme, { expires: 365, sameSite: "Lax" });
-  }, [theme]);
+  const { getCurrentTheme, toggleTheme, mounted } = useThemeContext();
 
   function setLanguagePage(path: string) {
     setLanguage(path);
@@ -115,12 +102,12 @@ const NavSection = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={toggle}
+                onClick={toggleTheme}
                 title="Theme-Switcher"
                 className="text-black dark:text-white cursor-pointer"
               >
                 {mounted ? (
-                  currentTheme === "dark" ? (
+                  getCurrentTheme() === "dark" ? (
                     <Moon />
                   ) : (
                     <Sun />
@@ -229,11 +216,11 @@ const NavSection = () => {
                 variant="ghost"
                 size="sm"
                 className="border cursor-pointer"
-                onClick={toggle}
-                title={`Current theme: ${theme}`}
+                onClick={toggleTheme}
+                title={`Current theme: ${getCurrentTheme()}`}
               >
                 {mounted ? (
-                  currentTheme === "dark" ? (
+                  getCurrentTheme() === "dark" ? (
                     <Moon />
                   ) : (
                     <Sun />

@@ -20,7 +20,7 @@ const ContactSection = () => {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const invalidForm =
-    !(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) ||
+    !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) ||
     !name ||
     !message;
 
@@ -77,7 +77,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="bg-muted/30 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2

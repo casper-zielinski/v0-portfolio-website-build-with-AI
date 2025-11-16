@@ -8,7 +8,7 @@ const Footer = () => {
   const t = useTranslations("footer");
   const tNav = useTranslations("navigation");
   return (
-    <footer className="bg-muted/30 py-12">
+    <footer className="py-12">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, translateY: 20 }}
