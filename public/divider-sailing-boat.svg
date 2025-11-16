@@ -1,0 +1,151 @@
+<svg width="100%" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1"/>
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        from="0 0"
+        to="1 0"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+    
+    <linearGradient id="sailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="hullGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#451a03;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Animated Waves -->
+  <path d="M0,80 Q150,60 300,80 T600,80 T900,80 T1200,80 L1200,150 L0,150 Z" fill="url(#waveGradient)" opacity="0.8">
+    <animate attributeName="d" 
+      values="M0,80 Q150,60 300,80 T600,80 T900,80 T1200,80 L1200,150 L0,150 Z;
+              M0,80 Q150,100 300,80 T600,80 T900,80 T1200,80 L1200,150 L0,150 Z;
+              M0,80 Q150,60 300,80 T600,80 T900,80 T1200,80 L1200,150 L0,150 Z"
+      dur="5s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Sailing Boat 1 (Main boat - closer) -->
+  <g id="boat1">
+    <path d="M 160,100 Q 160,90 185,87 L 280,87 Q 305,90 305,100 L 298,110 Q 290,113 230,113 Q 170,113 168,110 Z" 
+          fill="url(#hullGradient)" stroke="#2d1810" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    <line x1="170" y1="95" x2="295" y2="95" stroke="#451a03" stroke-width="0.5" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <line x1="175" y1="105" x2="290" y2="105" stroke="#451a03" stroke-width="0.5" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <line x1="230" y1="87" x2="230" y2="20" stroke="#3d2817" stroke-width="3">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <path d="M 230,25 L 230,80 L 285,65 Q 287,63 285,61 Z" fill="url(#sailGradient)" stroke="#3b82f6" stroke-width="2" opacity="0.95">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 230,25 L 230,80 L 285,65 Q 287,63 285,61 Z; M 230,25 L 230,80 L 290,65 Q 292,63 290,61 Z; M 230,25 L 230,80 L 285,65 Q 287,63 285,61 Z" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <line x1="230" y1="35" x2="275" y2="63" stroke="#bfdbfe" stroke-width="0.5" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <line x1="230" y1="50" x2="280" y2="64" stroke="#bfdbfe" stroke-width="0.5" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <line x1="230" y1="70" x2="283" y2="65" stroke="#bfdbfe" stroke-width="0.5" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <path d="M 230,30 L 190,50 L 230,75 Z" fill="url(#sailGradient)" stroke="#3b82f6" stroke-width="1.5" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 230,30 L 190,50 L 230,75 Z; M 230,30 L 185,50 L 230,75 Z; M 230,30 L 190,50 L 230,75 Z" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <line x1="230" y1="80" x2="283" y2="65" stroke="#3d2817" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <path d="M 230,20 L 230,12 L 245,16 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 230,20 L 230,12 L 245,16 Z; M 230,20 L 230,12 L 241,16 Z; M 230,20 L 230,12 L 245,16 Z" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 305,105 Q 307,103 309,105" stroke="#93c5fd" stroke-width="2" fill="none" opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 230 100; -4 230 100; 4 230 100; 0 230 100" dur="5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Sailing Boat 2 (Smaller, further away) -->
+  <g id="boat2" opacity="0.7">
+    <path d="M 160,105 Q 160,98 175,96 L 235,96 Q 250,98 250,105 L 245,112 Q 240,114 197,114 Q 165,114 163,112 Z" 
+          fill="url(#hullGradient)" stroke="#2d1810" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 197 105; -3 197 105; 3 197 105; 0 197 105" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    <line x1="197" y1="96" x2="197" y2="40" stroke="#3d2817" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 197 105; -3 197 105; 3 197 105; 0 197 105" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+    </line>
+    <path d="M 197,43 L 197,92 L 238,78 Q 239,77 238,76 Z" fill="url(#sailGradient)" stroke="#3b82f6" stroke-width="1.5" opacity="0.95">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 197 105; -3 197 105; 3 197 105; 0 197 105" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 197,43 L 197,92 L 238,78 Q 239,77 238,76 Z; M 197,43 L 197,92 L 242,78 Q 243,77 242,76 Z; M 197,43 L 197,92 L 238,78 Q 239,77 238,76 Z" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 197,45 L 170,65 L 197,88 Z" fill="url(#sailGradient)" stroke="#3b82f6" stroke-width="1" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 197 105; -3 197 105; 3 197 105; 0 197 105" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 197,45 L 170,65 L 197,88 Z; M 197,45 L 167,65 L 197,88 Z; M 197,45 L 170,65 L 197,88 Z" dur="2.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 197,40 L 197,34 L 208,37 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 197 105; -3 197 105; 3 197 105; 0 197 105" dur="4.5s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="d" values="M 197,40 L 197,34 L 208,37 Z; M 197,40 L 197,34 L 205,37 Z; M 197,40 L 197,34 L 208,37 Z" dur="0.7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Second wave layer for depth - drawn ON TOP of boats -->
+  <path d="M0,90 Q200,75 400,90 T800,90 T1200,90 L1200,150 L0,150 Z" fill="url(#waveGradient)" opacity="0.5">
+    <animate attributeName="d" 
+      values="M0,90 Q200,75 400,90 T800,90 T1200,90 L1200,150 L0,150 Z;
+              M0,90 Q200,105 400,90 T800,90 T1200,90 L1200,150 L0,150 Z;
+              M0,90 Q200,75 400,90 T800,90 T1200,90 L1200,150 L0,150 Z"
+      dur="4s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Moving boat 1 across the screen -->
+  <animateTransform
+    href="#boat1"
+    attributeName="transform"
+    type="translate"
+    from="-150 0"
+    to="1400 0"
+    dur="30s"
+    repeatCount="indefinite"/>
+    
+  <!-- Moving boat 2 across the screen (slower, starts further back) -->
+  <animateTransform
+    href="#boat2"
+    attributeName="transform"
+    type="translate"
+    from="-400 0"
+    to="1600 0"
+    dur="45s"
+    repeatCount="indefinite"/>
+</svg>

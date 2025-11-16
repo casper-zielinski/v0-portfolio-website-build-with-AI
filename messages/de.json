@@ -84,7 +84,9 @@
     "builtWith": "Erstellt mit",
     "by": "von",
     "allRightsReserved": "Alle Rechte vorbehalten",
-    "copyright": "© 2024 Casper Zielinski. Alle Rechte vorbehalten."
+    "copyright": "© 2024 Casper Zielinski. Alle Rechte vorbehalten.",
+    "dividerAlt": "Dekorativer Trenner mit Segelboot-Illustration",
+    "navigationAria": "Footer-Navigationslinks"
   },
   "common": {
     "loading": "Lädt...",

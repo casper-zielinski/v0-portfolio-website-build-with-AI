@@ -84,7 +84,9 @@
     "builtWith": "Built with",
     "by": "by",
     "allRightsReserved": "All rights reserved",
-    "copyright": "© 2024 Casper Zielinski. All rights reserved."
+    "copyright": "© 2024 Casper Zielinski. All rights reserved.",
+    "dividerAlt": "Decorative divider with sailing boat illustration",
+    "navigationAria": "Footer navigation links"
   },
   "common": {
     "loading": "Loading...",
