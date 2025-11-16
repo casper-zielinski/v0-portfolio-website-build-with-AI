@@ -26,7 +26,8 @@ const Herosection = () => {
               transition={{ duration: 1 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
-                {t("greeting")} <span className="text-primary">{t("name")}</span>
+                {t("greeting")}{" "}
+                <span className="text-primary">{t("name")}</span>
               </h1>
               <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-200 font-semibold text-pretty">
                 {t("title")}
@@ -88,14 +89,14 @@ const Herosection = () => {
             transition={{ duration: 2, type: "spring" }}
           >
             <div className="relative">
-              <div className="w-80 h-80 rounded-full shadow-2xl dark:shadow-blue-600 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <div className="w-80 h-80 lg:w-[26rem] lg:h-[26rem] rounded-full shadow-2xl dark:shadow-blue-600 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                 <motion.img
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                   src="/casper-portrait.jpg"
                   alt="Casper Zielinski"
-                  className="w-72 h-72 rounded-full object-cover border-4 border-background shadow-xl"
+                  className="w-72 h-72 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-background shadow-xl"
                 />
               </div>
             </div>

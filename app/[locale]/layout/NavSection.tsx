@@ -89,6 +89,14 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              href="#github"
+              className="text-muted-foreground hover:text-primary transition-color"
+            >
+              {"Github"}
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               href="#contact"
               className="text-muted-foreground hover:text-primary transition-color"
             >
@@ -117,6 +125,8 @@ const NavSection = () => {
                 )}
               </Button>
             </motion.div>
+
+            {/* Langauge Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline">{t("openLanguageMenu")}</Button>
@@ -198,6 +208,14 @@ const NavSection = () => {
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
               {t("projects")}
+            </motion.a>
+            <motion.a
+              whileHover={{ translateY: -2.5 }}
+              href="#github"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              {"Github"}
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}

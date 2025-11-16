@@ -6,14 +6,15 @@ import { motion } from "motion/react";
 import React from "react";
 import { useThemeContext } from "../hooks/ThemeProviderContext";
 import { GitHubStats } from "@/constants/GithubStats";
+import { useTranslations } from "next-intl";
 
 const GitHubSection = () => {
-  //   const t = useTranslations("github");
+  const t = useTranslations("github");
 
   const { getCurrentTheme, mounted } = useThemeContext();
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="github">
       {" "}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -24,23 +25,26 @@ const GitHubSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {"Github"}
+            {t("title")}
           </motion.h2>
         </div>
         <div className="grid grid-cols-6 gap-6 place-content-center place-items-center">
           {GitHubStats(
-            "Github Contributions",
-            "Meine Github Contributions in einem Snake game",
+            t("contributionSnake.title"),
+            t("contributionSnake.description"),
             "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg",
             "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg",
-            "Meine Github Statistiken",
-            "Meine Github Statistiken mit verschiedenen Rekorden, Commits Anzahl, Commit Streak, etc.",
+            t("contributionSnake.altText"),
+            t("stats.title"),
+            t("stats.description"),
+            "https://github-readme-stats.vercel.app/api?username=casper-zielinski&hide_border=true&include_all_commits=true&count_private=true",
             "https://camo.githubusercontent.com/caa8dd949e7bacbf669fd87f42d8a5bf1622a22ca5ff1e6e1e8f047bc79e0ef5/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565",
-            "https://camo.githubusercontent.com/caa8dd949e7bacbf669fd87f42d8a5bf1622a22ca5ff1e6e1e8f047bc79e0ef5/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565",
-            "Meine GitHub Repositorys",
-            "Die Github Repositorys wo ich am meisten Contributed habe",
-            "https://camo.githubusercontent.com/e2067d79e47803ae825e155c71367dc967ca06836fd5e27ad81efa64cad25a21/68747470733a2f2f6769746875622d636f6e7472696275746f722d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6361737065722d7a69656c696e736b69266c696d69743d35267468656d653d6461726b26636f6d62696e655f616c6c5f796561726c795f636f6e747269627574696f6e733d74727565",
-            "https://camo.githubusercontent.com/e2067d79e47803ae825e155c71367dc967ca06836fd5e27ad81efa64cad25a21/68747470733a2f2f6769746875622d636f6e7472696275746f722d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6361737065722d7a69656c696e736b69266c696d69743d35267468656d653d6461726b26636f6d62696e655f616c6c5f796561726c795f636f6e747269627574696f6e733d74727565"
+            t("stats.altText"),
+            t("repositories.title"),
+            t("repositories.description"),
+            "https://github-contributor-stats.vercel.app/api?username=casper-zielinski&limit=5&combine_all_yearly_contributions=true",
+            "https://github-contributor-stats.vercel.app/api?username=casper-zielinski&limit=5&theme=dark&combine_all_yearly_contributions=true",
+            t("repositories.altText")
           ).map((CurrentCard, index) => (
             <motion.div
               className={`col-span-6 ${index === 0 ? "" : "md:col-span-3"}`}
@@ -57,8 +61,8 @@ const GitHubSection = () => {
               <Card
                 className={`max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl  ${
                   index === 0
-                    ? "p-3 pb-5 h-[37vh] lg:h-[30vh] md:scale-x-175"
-                    : "h-[40vh]"
+                    ? "p-3 pb-5 min-h-[300px] h-[37vh] lg:h-[30vh] lg:min-h-[280px] md:scale-x-175"
+                    : "h-[50vh] min-h-[350px] lg:h-[40vh] lg:min-h-[260px]"
                 }`}
               >
                 {/* md:scale-110 lg:scale-125 xl:scale-150 */}
@@ -75,7 +79,7 @@ const GitHubSection = () => {
                         ? CurrentCard.srcDark
                         : CurrentCard.src
                     }
-                    alt="Github Contributions with Snake"
+                    alt={CurrentCard.alt}
                     width={4000}
                     height={4000}
                     className={`${

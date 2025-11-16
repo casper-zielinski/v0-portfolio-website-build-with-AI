@@ -79,9 +79,11 @@ const AboutSection = () => {
           >
             <Card className="p-0 pt-7 dark:bg-black bg-white max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl md:scale-110 lg:scale-125">
               <CardHeader>
-                <p className="text-center font-bold">{"Most Used Languages"}</p>
+                <p className="text-center font-bold">
+                  {t("mostUsedLanguages.title")}
+                </p>
                 <p className="text-center text-sm text-gray-400">
-                  {"Programming Languages I use the most"}
+                  {t("mostUsedLanguages.description")}
                 </p>
               </CardHeader>
               <CardContent className="p-0 pb-0 pt-0">
@@ -93,7 +95,7 @@ const AboutSection = () => {
                         : "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
                       : "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
                   }
-                  alt="Github Contributions with Snake"
+                  alt={t("mostUsedLanguages.altText")}
                   width={350}
                   height={350}
                   className={`translate-y-1 scale-x-101 rounded border-1 dark:border-0 border-primary`}

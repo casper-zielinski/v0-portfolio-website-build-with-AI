@@ -31,7 +31,12 @@
     "githubContributionsSecondary": "Hier kannst du meine GitHub-Beitragsaktivität sehen",
     "yearsExperience": "Jahre Erfahrung",
     "projectsCompleted": "Abgeschlossene Projekte",
-    "techStack": "Technologie-Stack"
+    "techStack": "Technologie-Stack",
+    "mostUsedLanguages": {
+      "title": "Meist verwendete Sprachen",
+      "description": "Programmiersprachen, die ich am häufigsten verwende",
+      "altText": "Statistik der am häufigsten verwendeten Programmiersprachen"
+    }
   },
   "skills": {
     "title": "Meine Fähigkeiten",
@@ -86,5 +91,23 @@
     "error": "Ein Fehler ist aufgetreten",
     "theme": "Thema",
     "currentTheme": "Aktuelles Thema"
+  },
+  "github": {
+    "title": "GitHub-Aktivität",
+    "contributionSnake": {
+      "title": "Beitragsaktivität",
+      "description": "Visuelle Darstellung meiner GitHub-Beiträge als interaktive Snake-Animation",
+      "altText": "Visualisierung der GitHub-Beitragsaktivität"
+    },
+    "stats": {
+      "title": "GitHub-Statistiken",
+      "description": "Umfassender Überblick über meine GitHub-Aktivität einschließlich Commits, Streaks und Beitragsmetriken",
+      "altText": "GitHub-Statistiken Übersichts-Dashboard"
+    },
+    "repositories": {
+      "title": "Top-Repositories",
+      "description": "Ausgewählte Repositories mit meinen bedeutendsten Beiträgen und Projekten",
+      "altText": "Übersicht der am meisten beigetragenen Repositories"
+    }
   }
 }
