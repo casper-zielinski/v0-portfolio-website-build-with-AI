@@ -84,7 +84,9 @@
     "builtWith": "Zbudowane z",
     "by": "przez",
     "allRightsReserved": "Wszelkie prawa zastrzeżone",
-    "copyright": "© 2024 Casper Zielinski. Wszelkie prawa zastrzeżone."
+    "copyright": "© 2024 Casper Zielinski. Wszelkie prawa zastrzeżone.",
+    "dividerAlt": "Dekoracyjny separator z ilustracją żaglówki",
+    "navigationAria": "Linki nawigacyjne stopki"
   },
   "common": {
     "loading": "Ładowanie...",

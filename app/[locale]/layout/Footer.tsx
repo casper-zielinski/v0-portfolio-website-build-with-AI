@@ -83,9 +83,10 @@ const Footer = () => {
         <img
           src="/divider-sailing-boat.svg"
           alt={t("dividerAlt")}
-          className="w-screen h-44"
+          className="w-screen h-44 will-change-transform"
           loading="lazy"
           aria-hidden="false"
+          style={{ transform: "translateZ(0)" }}
         />
       </motion.div>
     </footer>
