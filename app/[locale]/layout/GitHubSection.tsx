@@ -37,13 +37,13 @@ const GitHubSection = () => {
             t("contributionSnake.altText"),
             t("stats.title"),
             t("stats.description"),
-            "https://github-readme-stats.vercel.app/api?username=casper-zielinski&hide_border=true&include_all_commits=true&count_private=true",
-            "https://camo.githubusercontent.com/caa8dd949e7bacbf669fd87f42d8a5bf1622a22ca5ff1e6e1e8f047bc79e0ef5/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565",
+            "GitHubStats-Light.svg",
+            "GitHubStats-Dark.svg",
             t("stats.altText"),
             t("repositories.title"),
             t("repositories.description"),
-            "https://github-contributor-stats.vercel.app/api?username=casper-zielinski&limit=5&combine_all_yearly_contributions=true",
-            "https://github-contributor-stats.vercel.app/api?username=casper-zielinski&limit=5&theme=dark&combine_all_yearly_contributions=true",
+            "GitContributer-Light.svg",
+            "GitContributer-Dark.svg",
             t("repositories.altText")
           ).map((CurrentCard, index) => (
             <motion.div
@@ -87,7 +87,7 @@ const GitHubSection = () => {
                         ? "scale-x-115 scale-y-300 md:scale-y-200 mt-6"
                         : "translate-y-1 scale-x-101 rounded border-1 dark:border-0 border-primary"
                     }`}
-                    // p-1 rounded-2xl
+                    loading="lazy"
                   />
                 </CardContent>
               </Card>

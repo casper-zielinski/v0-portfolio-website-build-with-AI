@@ -11,6 +11,7 @@ import React, { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import emailjs from "@emailjs/browser";
 import { Slide, toast } from "react-toastify";
+import { sendEmail } from "@/utils/sendEmail";
 
 const ContactSection = () => {
   const router = useRouter();
@@ -30,54 +31,8 @@ const ContactSection = () => {
     setName("");
   };
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        form,
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        }
-      )
-      .then(
-        (response) => {
-          toast.success("Message send", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "light",
-            transition: Slide,
-          });
-          form.reset();
-          clearForm();
-        },
-        (error) => {
-          toast.error("Error sending message!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Slide,
-          });
-          console.log("FAILED...", error);
-        }
-      );
-  };
-
   return (
-    <section id="contact" className="bg-muted/30 py-20">
+    <section id="contact" className="bg-muted dark:bg-muted/30 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -157,11 +112,11 @@ const ContactSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <Card className="p-5 hover:shadow-2xl focus:shadow-2xl">
+            <Card className="p-5 bg-white dark:bg-black hover:shadow-2xl focus:shadow-2xl">
               <form
                 className="space-y-6"
                 id="contactForm"
-                onSubmit={sendEmail}
+                onSubmit={(e) => sendEmail(e, clearForm)}
                 ref={form}
               >
                 <div className="space-y-6">

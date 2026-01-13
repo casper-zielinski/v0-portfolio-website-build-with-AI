@@ -13,7 +13,7 @@ const AboutSection = () => {
   const { getCurrentTheme, mounted } = useThemeContext();
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 bg-muted dark:bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 variant="outline"
                 size="default"
                 asChild
-                className="text-lg px-8 py-6 bg-transparent"
+                className="text-lg px-8 py-6 bg-transparent rounded border-1 dark:border-0 border-primary hover:border-transparent"
               >
                 <a
                   href="/Casper_Daniel_Zielinski_Lebenslauf.pdf"
@@ -91,14 +91,15 @@ const AboutSection = () => {
                   src={
                     mounted
                       ? getCurrentTheme() === "dark"
-                        ? "https://camo.githubusercontent.com/a6dd7124d800bdedb476ecfb55a812530befc309909f91cde130610bc23e732b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565266c61796f75743d636f6d70616374"
-                        : "https://github-readme-stats.vercel.app/api/top-langs/?username=casper-zielinski&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
-                      : "https://camo.githubusercontent.com/a6dd7124d800bdedb476ecfb55a812530befc309909f91cde130610bc23e732b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565266c61796f75743d636f6d70616374"
+                        ? "Used-Languages-Dark-Mode.svg"
+                        : "Used-Languages-Light-Mode.svg"
+                        : "https://camo.githubusercontent.com/a6dd7124d800bdedb476ecfb55a812530befc309909f91cde130610bc23e732b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565266c61796f75743d636f6d70616374"
                   }
                   alt={t("mostUsedLanguages.altText")}
                   width={350}
                   height={350}
                   className={`translate-y-1 scale-x-101 rounded border-1 dark:border-0 border-primary`}
+                  loading="lazy"
                 />
               </CardContent>
             </Card>

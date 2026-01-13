@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Footer = () => {
   const t = useTranslations("footer");
@@ -80,8 +81,10 @@ const Footer = () => {
         role="img"
         aria-label={t("dividerAlt")}
       >
-        <img
-          src="/divider-sailing-boat.svg"
+        <Image
+          src={"/divider-sailing-boat.svg"}
+          height={20}
+          width={100}
           alt={t("dividerAlt")}
           className="w-screen h-44 will-change-transform"
           loading="lazy"

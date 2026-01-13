@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 const SkillSection = () => {
   const t = useTranslations("skills");
   return (
-    <section id="skills" className="py-20 bg-muted/30">
+    <section id="skills" className="py-20 bg-muted dark:bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -39,7 +39,7 @@ const SkillSection = () => {
                   translateY: { duration: 1.6, type: "spring" },
                 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow group">
+                <Card className="p-6 hover:shadow-lg bg-white dark:bg-zinc-950 transition-shadow group">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-6 h-6 text-primary" />

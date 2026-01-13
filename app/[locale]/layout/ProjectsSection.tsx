@@ -9,6 +9,7 @@ import React from "react";
 import { projects } from "../Info";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const ProjectsSection = () => {
   const router = useRouter();
@@ -45,14 +46,17 @@ const ProjectsSection = () => {
               key={index}
             >
               <Card
-                className={`overflow-hidden hover:shadow-xl transition-shadow group ${
-                  index === 1 && "bg-white/10 dark:bg-black scale-101 md:scale-105 lg:scale-110"
+                className={`overflow-hidden hover:shadow-xl bg-primary/20 dark:bg-black/5 transition-shadow group ${
+                  index === 1 &&
+                  "bg-white/10 dark:bg-black scale-101 md:scale-105 lg:scale-110 border-2 border-primary dark:border-transparent"
                 }`}
               >
                 <div className="aspect-video overflow-hidden">
-                  <img
+                  <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
+                    width={100}
+                    height={100}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
