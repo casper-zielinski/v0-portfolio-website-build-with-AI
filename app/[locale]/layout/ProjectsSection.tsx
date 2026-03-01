@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { projects } from "../Info";
+import { getProjects } from "../Info";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -14,6 +14,11 @@ import Image from "next/image";
 const ProjectsSection = () => {
   const router = useRouter();
   const t = useTranslations("projects");
+  const t_restaurant = useTranslations("projects.restaurantWebsite");
+  const t_social = useTranslations("projects.socialMediaApp");
+  const t_issue = useTranslations("projects.issueTracker");
+
+  const projects = getProjects(t, t_restaurant, t_social, t_issue);
 
   return (
     <section id="projects" className="py-20">

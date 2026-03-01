@@ -28,7 +28,7 @@ const GitHubSection = () => {
             {t("title")}
           </motion.h2>
         </div>
-        <div className="grid grid-cols-6 gap-6 place-content-center place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center place-items-center">
           {GitHubStats(
             t("contributionSnake.title"),
             t("contributionSnake.description"),
@@ -47,7 +47,9 @@ const GitHubSection = () => {
             t("repositories.altText")
           ).map((CurrentCard, index) => (
             <motion.div
-              className={`col-span-6 ${index === 0 ? "" : "md:col-span-3"}`}
+              className={`col-span-1 ${
+                index === 0 ? "md:col-span-2" : "md:col-span-1"
+              }`}
               key={index}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -59,20 +61,15 @@ const GitHubSection = () => {
               }}
             >
               <Card
-                className={`max-w-sm transition-all hover:shadow-2xl focus:shadow-2xl  ${
-                  index === 0
-                    ? "p-3 pb-5 min-h-[300px] h-[37vh] lg:h-[30vh] lg:min-h-[280px] md:scale-x-175"
-                    : "h-[50vh] min-h-[350px] lg:h-[40vh] lg:min-h-[260px]"
-                }`}
+                className={`w-full h-full transition-all hover:shadow-2xl focus:shadow-2xl p-2 sm:p-4`}
               >
-                {/* md:scale-110 lg:scale-125 xl:scale-150 */}
-                <CardHeader className={index === 0 ? "md:scale-x-60" : ""}>
+                <CardHeader>
                   <p className="text-center font-bold">{CurrentCard.header}</p>
                   <p className="text-center text-sm text-gray-400">
                     {CurrentCard.headerSecondary}
                   </p>
                 </CardHeader>
-                <CardContent className={index === 0 ? "" : "p-0 pb-0 pt-0"}>
+                <CardContent>
                   <Image
                     src={
                       mounted && getCurrentTheme() === "dark"
@@ -80,13 +77,9 @@ const GitHubSection = () => {
                         : CurrentCard.src
                     }
                     alt={CurrentCard.alt}
-                    width={4000}
-                    height={4000}
-                    className={`${
-                      index === 0
-                        ? "scale-x-115 scale-y-300 md:scale-y-200 mt-6"
-                        : "translate-y-1 scale-x-101 rounded border-1 dark:border-0 border-primary"
-                    }`}
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto rounded-lg scale-110"
                     loading="lazy"
                   />
                 </CardContent>
