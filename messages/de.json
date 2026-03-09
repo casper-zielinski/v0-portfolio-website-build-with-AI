@@ -53,9 +53,9 @@
     "viewProject": "Projekt ansehen",
     "viewCode": "Code ansehen",
     "technologies": "Technologien",
-    "restaurantWebsite": {
-      "title": "Restaurant-Website",
-      "description": "Moderne Restaurant-Landingpage mit interaktivem Menü, Reservierungssystem, Standortkarte und Kontaktformularen"
+    "smartKasse": {
+      "title": "SmartKasse",
+      "description": "RKSV-konforme Registrierkasse und Fahrtverwaltungssystem für österreichische Taxiunternehmen. Mit JWT-Authentifizierung, Belegausstellung und nativer Mobile App via Capacitor."
     },
     "socialMediaApp": {
       "title": "Social Media App mit KI",

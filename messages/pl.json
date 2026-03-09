@@ -53,9 +53,9 @@
     "viewProject": "Zobacz projekt",
     "viewCode": "Zobacz kod",
     "technologies": "Technologie",
-    "restaurantWebsite": {
-      "title": "Strona restauracji",
-      "description": "Nowoczesna strona docelowa restauracji z interaktywnym menu, systemem rezerwacji, mapą lokalizacji i formularzami kontaktowymi"
+    "smartKasse": {
+      "title": "SmartKasse",
+      "description": "Zgodna z RKSV kasa fiskalna i system zarządzania kursami dla austriackich firm taksówkarskich. Z uwierzytelnianiem JWT, generowaniem paragonów i natywną aplikacją mobilną via Capacitor."
     },
     "socialMediaApp": {
       "title": "Aplikacja mediów społecznościowych z AI",

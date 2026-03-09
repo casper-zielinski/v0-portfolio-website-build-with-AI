@@ -14,11 +14,11 @@ import Image from "next/image";
 const ProjectsSection = () => {
   const router = useRouter();
   const t = useTranslations("projects");
-  const t_restaurant = useTranslations("projects.restaurantWebsite");
+  const t_smartkasse = useTranslations("projects.smartKasse");
   const t_social = useTranslations("projects.socialMediaApp");
   const t_issue = useTranslations("projects.issueTracker");
 
-  const projects = getProjects(t, t_restaurant, t_social, t_issue);
+  const projects = getProjects(t, t_smartkasse, t_social, t_issue);
 
   return (
     <section id="projects" className="py-20">
