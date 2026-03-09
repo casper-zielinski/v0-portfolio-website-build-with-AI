@@ -45,7 +45,9 @@
     "queryLanguages": "Abfragesprachen",
     "libraries": "Bibliotheken",
     "frameworks": "Frameworks",
-    "backendServices": "Backend-Dienste"
+    "backendServices": "Backend-Dienste",
+    "showAll": "Alle Skills anzeigen",
+    "showLess": "Weniger anzeigen"
   },
   "projects": {
     "title": "Meine Projekte",
