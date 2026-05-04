@@ -42,9 +42,9 @@ const GitHubSection = () => {
             t("stats.altText"),
             t("repositories.title"),
             t("repositories.description"),
-            "GitContributer-Light.svg",
-            "GitContributer-Dark.svg",
-            t("repositories.altText")
+            "https://streak-stats.demolab.com?user=casper-zielinski&fire=1E90FF&ring=1E90FF&currStreakLabel=1E90FF&hide_border=true",
+            "https://streak-stats.demolab.com?user=casper-zielinski&theme=github-dark-blue&hide_border=true",
+            t("repositories.altText"),
           ).map((CurrentCard, index) => (
             <motion.div
               className={`col-span-1 ${
