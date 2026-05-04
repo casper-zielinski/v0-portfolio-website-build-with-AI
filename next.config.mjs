@@ -23,6 +23,8 @@ const nextConfig = {
       },
     ],
   },
+  output: process.env.MOBILE === "true" ? "export" : undefined,
+  trailingSlash: true
 };
 
 export default withNextIntl(nextConfig);
