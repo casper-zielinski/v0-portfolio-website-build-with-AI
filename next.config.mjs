@@ -23,6 +23,14 @@ const nextConfig = {
       },
     ],
   },
+  // pdf.js needs the legacy build to run on older phones / WebViews
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "pdfjs-dist$": "pdfjs-dist/legacy/build/pdf.mjs",
+    };
+    return config;
+  },
   output: process.env.MOBILE === "true" ? "export" : undefined,
   trailingSlash: true
 };

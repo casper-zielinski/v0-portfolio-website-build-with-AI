@@ -2,15 +2,21 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useThemeContext } from "../hooks/ThemeProviderContext";
+
+const CvViewer = dynamic(() => import("./CvViewer"), { ssr: false });
+
+const CV_FILE = "/Casper_Zielinski_Lebenslauf.pdf";
 
 const AboutSection = () => {
   const t = useTranslations("about");
   const { getCurrentTheme, mounted } = useThemeContext();
+  const [showCV, setShowCV] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-muted dark:bg-muted/30">
@@ -49,6 +55,7 @@ const AboutSection = () => {
               </div>
             </div>
             <motion.div
+              className="flex flex-wrap gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ type: "spring" }}
@@ -56,13 +63,19 @@ const AboutSection = () => {
               <Button
                 variant="outline"
                 size="default"
+                onClick={() => setShowCV((v) => !v)}
+                aria-expanded={showCV}
+                className="text-lg px-8 py-6 bg-transparent rounded border-1 dark:border-0 border-primary hover:border-transparent"
+              >
+                {showCV ? t("hideCV") : t("viewCV")}
+              </Button>
+              <Button
+                variant="outline"
+                size="default"
                 asChild
                 className="text-lg px-8 py-6 bg-transparent rounded border-1 dark:border-0 border-primary hover:border-transparent"
               >
-                <a
-                  href="/Casper_Daniel_Zielinski_Lebenslauf.pdf"
-                  download="Casper_Zielinski_CV.pdf"
-                >
+                <a href={CV_FILE} download="Casper_Zielinski_CV.pdf">
                   {t("downloadCV")}
                 </a>
               </Button>
@@ -105,6 +118,23 @@ const AboutSection = () => {
             </Card>
           </motion.div>
         </div>
+
+        <AnimatePresence initial={false}>
+          {showCV && (
+            <motion.div
+              key="cv"
+              className="overflow-hidden mt-10"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="pt-16 max-w-4xl mx-auto ">
+                <CvViewer file={CV_FILE} />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
