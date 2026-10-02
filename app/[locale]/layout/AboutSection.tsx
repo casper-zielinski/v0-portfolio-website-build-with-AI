@@ -11,8 +11,6 @@ import { useThemeContext } from "../hooks/ThemeProviderContext";
 
 const CvViewer = dynamic(() => import("./CvViewer"), { ssr: false });
 
-const CV_FILE = "/Casper_Zielinski_Lebenslauf.pdf";
-
 const AboutSection = () => {
   const t = useTranslations("about");
   const { getCurrentTheme, mounted } = useThemeContext();
@@ -75,7 +73,7 @@ const AboutSection = () => {
                 asChild
                 className="text-lg px-8 py-6 bg-transparent rounded border-1 dark:border-0 border-primary hover:border-transparent"
               >
-                <a href={CV_FILE} download="Casper_Zielinski_CV.pdf">
+                <a href={t("cv")} download="Casper_Zielinski_CV.pdf">
                   {t("downloadCV")}
                 </a>
               </Button>
@@ -104,9 +102,9 @@ const AboutSection = () => {
                   src={
                     mounted
                       ? getCurrentTheme() === "dark"
-                        ? "Used-Languages-Dark-Mode.svg"
-                        : "Used-Languages-Light-Mode.svg"
-                        : "https://camo.githubusercontent.com/a6dd7124d800bdedb476ecfb55a812530befc309909f91cde130610bc23e732b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565266c61796f75743d636f6d70616374"
+                        ? "/Used-Languages-Dark-Mode.svg"
+                        : "/Used-Languages-Light-Mode.svg"
+                      : "https://camo.githubusercontent.com/a6dd7124d800bdedb476ecfb55a812530befc309909f91cde130610bc23e732b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6361737065722d7a69656c696e736b69267468656d653d6461726b26686964655f626f726465723d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565266c61796f75743d636f6d70616374"
                   }
                   alt={t("mostUsedLanguages.altText")}
                   width={350}
@@ -130,7 +128,7 @@ const AboutSection = () => {
               transition={{ duration: 0.4 }}
             >
               <div className="pt-16 max-w-4xl mx-auto ">
-                <CvViewer file={CV_FILE} />
+                <CvViewer file={t("cv")} />
               </div>
             </motion.div>
           )}

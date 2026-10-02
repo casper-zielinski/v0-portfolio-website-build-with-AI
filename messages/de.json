@@ -39,6 +39,7 @@
     "yearsExperience": "Jahre Erfahrung",
     "projectsCompleted": "Abgeschlossene Projekte",
     "techStack": "Technologie-Stack",
+    "cv": "/Casper_Zielinski_Lebenslauf.pdf",
     "mostUsedLanguages": {
       "title": "Meist verwendete Sprachen",
       "description": "Programmiersprachen, die ich am häufigsten verwende",
@@ -64,16 +65,41 @@
     "technologies": "Technologien",
     "smartKasse": {
       "title": "SmartKasse",
-      "description": "RKSV-konforme Registrierkasse und Fahrtverwaltungssystem für österreichische Taxiunternehmen. Mit JWT-Authentifizierung, Belegausstellung und nativer Mobile App via Capacitor."
+      "description": "RKSV-konforme Registrierkasse und Fahrtverwaltungssystem für österreichische Taxiunternehmen. Mit JWT-Authentifizierung, Belegausstellung und nativer Mobile App via Capacitor.",
+      "details": "SmartKasse hilft österreichischen Taxiunternehmen, rechtskonform zu bleiben und den Arbeitsalltag zu vereinfachen. Fahrer verwalten ihre Fahrten und stellen Belege über eine native Mobile App aus, während das Backend Authentifizierung und Datenspeicherung übernimmt.",
+      "features": [
+        "RKSV-konforme Registrierkasse",
+        "Fahrtverwaltung für Taxiunternehmen",
+        "JWT-Authentifizierung",
+        "Belegausstellung",
+        "Native Mobile App via Capacitor"
+      ]
     },
     "socialMediaApp": {
       "title": "Social Media App mit KI",
-      "description": "Interaktive Social-Plattform mit Echtzeit-Posts, Kommentaren, verschachtelten Antworten und Live-Like-Updates. Mit Authentifizierung und Gast-Login"
+      "description": "Interaktive Social-Plattform mit Echtzeit-Posts, Kommentaren, verschachtelten Antworten und Live-Like-Updates. Mit Authentifizierung und Gast-Login",
+      "details": "Eine Social-Plattform rund um Echtzeit-Interaktion. Nutzer können posten, kommentieren, in verschachtelten Threads antworten und Likes live aktualisiert sehen – mit Gast-Login zum schnellen Ausprobieren.",
+      "features": [
+        "Echtzeit-Posts und -Kommentare",
+        "Verschachtelte Antworten",
+        "Live-Like-Updates",
+        "Authentifizierung und Gast-Login"
+      ]
     },
     "issueTracker": {
       "title": "Issue Tracker",
-      "description": "Projektmanagement-Tool zum Verfolgen von Issues, Bugs und Aufgaben mit Statusverwaltung, Prioritätsstufen und Benutzerzuweisungen"
-    }
+      "description": "Projektmanagement-Tool zum Verfolgen von Issues, Bugs und Aufgaben mit Statusverwaltung, Prioritätsstufen und Benutzerzuweisungen",
+      "details": "Ein Projektmanagement-Tool zum Nachverfolgen von Arbeit. Issues durchlaufen Status, haben Prioritäten und können Benutzern zugewiesen werden, sodass das Team immer weiß, was offen ist und wer zuständig ist.",
+      "features": [
+        "Verfolgung von Issues, Bugs und Aufgaben",
+        "Statusverwaltung",
+        "Prioritätsstufen",
+        "Benutzerzuweisungen"
+      ]
+    },
+    "viewAll": "Alle Projekte anzeigen",
+    "backToHome": "Zurück zur Startseite",
+    "features": "Hauptfunktionen"
   },
   "contact": {
     "title": "Kontaktiere mich",

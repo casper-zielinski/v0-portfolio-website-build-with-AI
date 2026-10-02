@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Cookies from "js-cookie";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -28,6 +28,7 @@ const NavSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState("");
   const router = useRouter();
+  const base = `/${useLocale()}`;
   const t = useTranslations("navigation");
 
   const { getCurrentTheme, toggleTheme, mounted } = useThemeContext();
@@ -45,7 +46,7 @@ const NavSection = () => {
             className="font-bold text-xl text-primary cursor-pointer hover:bg-gray-300 hover:shadow dark:hover:bg-accent p-2 rounded"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => router.push("/#home")}
+            onClick={() => router.push(`${base}#home`)}
           >
             Casper Zielinski
           </motion.div>
@@ -57,7 +58,7 @@ const NavSection = () => {
               whileTap={{ scale: 0.95 }}
               layoutId="underline"
               id="underline"
-              href="#home"
+              href={`${base}#home`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {t("home")}
@@ -65,7 +66,7 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#about"
+              href={`${base}#about`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {t("about")}
@@ -73,7 +74,7 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#skills"
+              href={`${base}#skills`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {t("skills")}
@@ -81,7 +82,7 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#projects"
+              href={`${base}#projects`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {t("projects")}
@@ -89,7 +90,7 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#github"
+              href={`${base}#github`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {"Github"}
@@ -97,7 +98,7 @@ const NavSection = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#contact"
+              href={`${base}#contact`}
               className="text-muted-foreground hover:text-primary transition-color"
             >
               {t("contact")}
@@ -179,7 +180,7 @@ const NavSection = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#home"
+              href={`${base}#home`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-color"
             >
@@ -187,7 +188,7 @@ const NavSection = () => {
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#about"
+              href={`${base}#about`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
@@ -195,7 +196,7 @@ const NavSection = () => {
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#skills"
+              href={`${base}#skills`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
@@ -203,7 +204,7 @@ const NavSection = () => {
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#projects"
+              href={`${base}#projects`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
@@ -211,7 +212,7 @@ const NavSection = () => {
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#github"
+              href={`${base}#github`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >
@@ -219,7 +220,7 @@ const NavSection = () => {
             </motion.a>
             <motion.a
               whileHover={{ translateY: -2.5 }}
-              href="#contact"
+              href={`${base}#contact`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
             >

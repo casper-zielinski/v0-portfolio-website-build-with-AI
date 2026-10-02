@@ -39,6 +39,7 @@
     "yearsExperience": "Years Experience",
     "projectsCompleted": "Projects Completed",
     "techStack": "Tech Stack",
+    "cv":"/Casper_Zielinski_CV_EN.pdf",
     "mostUsedLanguages": {
       "title": "Most Used Languages",
       "description": "Programming languages I use the most",
@@ -64,16 +65,41 @@
     "technologies": "Technologies",
     "smartKasse": {
       "title": "SmartKasse",
-      "description": "RKSV-compliant cash register and ride management system for Austrian taxi companies. With JWT authentication, receipt generation, and a native mobile app via Capacitor."
+      "description": "RKSV-compliant cash register and ride management system for Austrian taxi companies. With JWT authentication, receipt generation, and a native mobile app via Capacitor.",
+      "details": "SmartKasse helps Austrian taxi companies stay compliant while keeping day-to-day work simple. Drivers manage their rides and issue receipts from a native mobile app, while the backend handles authentication and data storage.",
+      "features": [
+        "RKSV-compliant cash register",
+        "Ride management for taxi companies",
+        "JWT authentication",
+        "Receipt generation",
+        "Native mobile app via Capacitor"
+      ]
     },
     "socialMediaApp": {
       "title": "Social Media App with AI",
-      "description": "Interactive social platform with real-time posts, comments, nested replies, and live like updates. Features authentication and guest login"
+      "description": "Interactive social platform with real-time posts, comments, nested replies, and live like updates. Features authentication and guest login",
+      "details": "A social platform built around real-time interaction. Users can post, comment, reply in nested threads and see likes update live, with a guest login for quickly trying it out.",
+      "features": [
+        "Real-time posts and comments",
+        "Nested replies",
+        "Live like updates",
+        "Authentication and guest login"
+      ]
     },
     "issueTracker": {
       "title": "Issue Tracker",
-      "description": "Project management tool for tracking issues, bugs, and tasks with status management, priority levels, and user assignments"
-    }
+      "description": "Project management tool for tracking issues, bugs, and tasks with status management, priority levels, and user assignments",
+      "details": "A project management tool for keeping track of work. Issues move through statuses, carry priorities and can be assigned to users, so a team always knows what is open and who owns it.",
+      "features": [
+        "Issue, bug and task tracking",
+        "Status management",
+        "Priority levels",
+        "User assignments"
+      ]
+    },
+    "viewAll": "View all projects",
+    "backToHome": "Back to home",
+    "features": "Key features"
   },
   "contact": {
     "title": "Contact Me",

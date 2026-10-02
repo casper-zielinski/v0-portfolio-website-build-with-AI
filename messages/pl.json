@@ -39,6 +39,7 @@
     "yearsExperience": "Lat doświadczenia",
     "projectsCompleted": "Ukończone projekty",
     "techStack": "Stack technologiczny",
+    "cv":"/Casper_Zielinski_CV_PL.pdf",
     "mostUsedLanguages": {
       "title": "Najczęściej używane języki",
       "description": "Języki programowania, których używam najczęściej",
@@ -64,16 +65,41 @@
     "technologies": "Technologie",
     "smartKasse": {
       "title": "SmartKasse",
-      "description": "Zgodna z RKSV kasa fiskalna i system zarządzania kursami dla austriackich firm taksówkarskich. Z uwierzytelnianiem JWT, generowaniem paragonów i natywną aplikacją mobilną via Capacitor."
+      "description": "Zgodna z RKSV kasa fiskalna i system zarządzania kursami dla austriackich firm taksówkarskich. Z uwierzytelnianiem JWT, generowaniem paragonów i natywną aplikacją mobilną via Capacitor.",
+      "details": "SmartKasse pomaga austriackim firmom taksówkarskim zachować zgodność z przepisami i upraszcza codzienną pracę. Kierowcy zarządzają kursami i wystawiają paragony w natywnej aplikacji mobilnej, a backend obsługuje uwierzytelnianie i przechowywanie danych.",
+      "features": [
+        "Kasa fiskalna zgodna z RKSV",
+        "Zarządzanie kursami dla firm taksówkarskich",
+        "Uwierzytelnianie JWT",
+        "Generowanie paragonów",
+        "Natywna aplikacja mobilna via Capacitor"
+      ]
     },
     "socialMediaApp": {
       "title": "Aplikacja mediów społecznościowych z AI",
-      "description": "Interaktywna platforma społecznościowa z postami w czasie rzeczywistym, komentarzami, zagnieżdżonymi odpowiedziami i aktualizacjami polubień na żywo. Z uwierzytelnianiem i logowaniem gościa"
+      "description": "Interaktywna platforma społecznościowa z postami w czasie rzeczywistym, komentarzami, zagnieżdżonymi odpowiedziami i aktualizacjami polubień na żywo. Z uwierzytelnianiem i logowaniem gościa",
+      "details": "Platforma społecznościowa oparta na interakcji w czasie rzeczywistym. Użytkownicy mogą publikować posty, komentować, odpowiadać w zagnieżdżonych wątkach i widzieć polubienia na żywo, a logowanie gościa pozwala szybko wypróbować aplikację.",
+      "features": [
+        "Posty i komentarze w czasie rzeczywistym",
+        "Zagnieżdżone odpowiedzi",
+        "Aktualizacje polubień na żywo",
+        "Uwierzytelnianie i logowanie gościa"
+      ]
     },
     "issueTracker": {
       "title": "Tracker problemów",
-      "description": "Narzędzie do zarządzania projektami do śledzenia problemów, błędów i zadań z zarządzaniem statusem, poziomami priorytetów i przypisaniami użytkowników"
-    }
+      "description": "Narzędzie do zarządzania projektami do śledzenia problemów, błędów i zadań z zarządzaniem statusem, poziomami priorytetów i przypisaniami użytkowników",
+      "details": "Narzędzie do zarządzania projektami, które pomaga śledzić pracę. Zgłoszenia przechodzą przez statusy, mają priorytety i mogą być przypisane do użytkowników, dzięki czemu zespół wie, co jest otwarte i kto za to odpowiada.",
+      "features": [
+        "Śledzenie problemów, błędów i zadań",
+        "Zarządzanie statusem",
+        "Poziomy priorytetów",
+        "Przypisania użytkowników"
+      ]
+    },
+    "viewAll": "Zobacz wszystkie projekty",
+    "backToHome": "Powrót do strony głównej",
+    "features": "Główne funkcje"
   },
   "contact": {
     "title": "Skontaktuj się ze mną",

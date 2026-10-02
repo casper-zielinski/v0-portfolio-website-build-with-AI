@@ -2,10 +2,11 @@
 
 import { motion } from "motion/react";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Footer = () => {
+  const base = `/${useLocale()}`;
   const t = useTranslations("footer");
   const tNav = useTranslations("navigation");
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#home"
+              href={`${base}#home`}
               className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label={tNav("home")}
             >
@@ -36,7 +37,7 @@ const Footer = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#about"
+              href={`${base}#about`}
               className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label={tNav("about")}
             >
@@ -45,7 +46,7 @@ const Footer = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#skills"
+              href={`${base}#skills`}
               className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label={tNav("skills")}
             >
@@ -54,7 +55,7 @@ const Footer = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#projects"
+              href={`${base}#projects`}
               className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label={tNav("projects")}
             >
@@ -63,7 +64,7 @@ const Footer = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              href="#contact"
+              href={`${base}#contact`}
               className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               aria-label={tNav("contact")}
             >

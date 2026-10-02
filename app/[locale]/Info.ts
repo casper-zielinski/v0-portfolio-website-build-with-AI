@@ -26,15 +26,22 @@ export const skills = [
   { name: "Jetpack Compose", category: "Mobile", icon: Smartphone },
 ];
 
+type ProjectTranslator = {
+  (key: any): string;
+  raw: (key: any) => any;
+};
+
 export const getProjects = (
   t: (key: string) => string,
-  t_smartkasse: (key: "title" | "description") => string,
-  t_social: (key: "title" | "description") => string,
-  t_issue: (key: "title" | "description") => string,
+  t_smartkasse: ProjectTranslator,
+  t_social: ProjectTranslator,
+  t_issue: ProjectTranslator,
 ) => [
   {
     title: t_social("title"),
     description: t_social("description"),
+    details: t_social("details"),
+    features: t_social.raw("features") as string[],
     tech: [
       "Next.js",
       "React",
@@ -51,6 +58,8 @@ export const getProjects = (
   {
     title: t_smartkasse("title"),
     description: t_smartkasse("description"),
+    details: t_smartkasse("details"),
+    features: t_smartkasse.raw("features") as string[],
     tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Capacitor"],
     image: "/Smart-Kassa-Dashboard.png",
     projectlink: "https://smart-kassa.vercel.app/",
@@ -59,6 +68,8 @@ export const getProjects = (
   {
     title: t_issue("title"),
     description: t_issue("description"),
+    details: t_issue("details"),
+    features: t_issue.raw("features") as string[],
     tech: [
       "Next.js",
       "React",

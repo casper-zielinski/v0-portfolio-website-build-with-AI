@@ -5,14 +5,16 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import React from "react";
 import { getProjects } from "../Info";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const ProjectsSection = () => {
   const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations("projects");
   const t_smartkasse = useTranslations("projects.smartKasse");
   const t_social = useTranslations("projects.socialMediaApp");
@@ -107,6 +109,15 @@ const ProjectsSection = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Link
+            href={`/${locale}/projects`}
+            className="underline underline-offset-4 text-lg font-medium hover:text-primary transition-colors cursor-pointer"
+          >
+            {t("viewAll")}
+          </Link>
         </div>
       </div>
     </section>
