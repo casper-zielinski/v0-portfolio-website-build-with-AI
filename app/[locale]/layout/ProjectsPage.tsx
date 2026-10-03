@@ -19,6 +19,7 @@ const ProjectsPage = () => {
   const t_issue = useTranslations("projects.issueTracker");
   const t_blink = useTranslations("projects.blink");
   const t_restaurant = useTranslations("projects.restaurant");
+  const t_tags = useTranslations("projects.tags");
 
   const projects = getAllProjects(
     t,
@@ -46,7 +47,7 @@ const ProjectsPage = () => {
         </Link>
 
         <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
+          <h1 className="font-display text-3xl sm:text-4xl font-normal tracking-wide mb-4 text-balance">
             {t("title")}
           </h1>
           <p className="text-muted-foreground">{t("description")}</p>
@@ -56,7 +57,7 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="h-full overflow-hidden hover:shadow-xl bg-primary/20 dark:bg-black/5 transition-shadow group"
+              className="h-full overflow-hidden hover:shadow-xl bg-primary/20 dark:bg-black/60 transition-shadow group"
             >
               <div className="aspect-video overflow-hidden">
                 <Image
@@ -69,7 +70,18 @@ const ProjectsPage = () => {
               </div>
               <div className="p-6 space-y-4 flex flex-col flex-1">
                 <h2 className="text-xl font-semibold">{project.title}</h2>
-                <p className="text-muted-foreground text-sm">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge
+                      key={tag.key}
+                      variant="outline"
+                      className="text-xs rounded-full border-primary/50 text-primary"
+                    >
+                      {t_tags(tag.key, { count: tag.count ?? 0 })}
+                    </Badge>
+                  ))}
+                </div>
+                <p className="font-semibold">
                   {project.description}
                 </p>
                 <p className="text-sm">{project.details}</p>

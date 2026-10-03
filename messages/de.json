@@ -66,7 +66,7 @@
     "smartKasse": {
       "title": "SmartKassa",
       "description": "RKSV-konforme Registrierkasse und Fahrtverwaltungssystem für österreichische Taxiunternehmen. Mit JWT-Authentifizierung, Belegausstellung und nativer Mobile App via Capacitor.",
-      "details": "SmartKassa hilft österreichischen Taxiunternehmen, rechtskonform zu bleiben und den Arbeitsalltag zu vereinfachen. Fahrer verwalten ihre Fahrten und stellen Belege über eine native Mobile App aus, während das Backend Authentifizierung und Datenspeicherung übernimmt.",
+      "details": "Dieses Projekt wurde während eines Praktikums an der FH JOANNEUM entwickelt und ist der Prototyp von „SmartKassa“, dem Produkt unseres Startups Zynqly: ein modernes Kassensystem für Taxis. Es hilft österreichischen Taxiunternehmen, rechtskonform zu bleiben und den Arbeitsalltag zu vereinfachen. Fahrer verwalten ihre Fahrten und stellen Belege über eine native Mobile App aus, während das Backend Authentifizierung und Datenspeicherung übernimmt.",
       "features": [
         "RKSV-konforme Registrierkasse",
         "Fahrtverwaltung für Taxiunternehmen",
@@ -103,7 +103,7 @@
     "blink": {
       "title": "Blink",
       "description": "Blink ist eine native Android-App, die im Rahmen der Lehrveranstaltung „Mobile Platforms“ (Übung 4) an der FH JOANNEUM entwickelt wurde. Sie zeigt eine moderne Benutzeroberfläche mit Jetpack Compose nach den Prinzipien von Material Design 3.",
-      "details": "Ein minimalistischer Social-Media-Client, mit dem Nutzer Status-Updates verfassen und zwischen Home, Suche und Account navigieren können. Er nutzt Firebase als Backend und Cloudinary zum Hochladen und Speichern von Bildern – mit Fokus auf eine saubere Compose-Implementierung und UI-Logik.",
+      "details": "Blink entstand gemeinsam mit einem Teamkollegen als Projekt für die FH JOANNEUM und ist ein minimalistischer Social-Media-Client, mit dem Nutzer Status-Updates verfassen und zwischen Home, Suche und Account navigieren können. Er nutzt Firebase als Backend und Cloudinary zum Hochladen und Speichern von Bildern – mit Fokus auf eine saubere Compose-Implementierung und UI-Logik.",
       "features": [
         "Vollständig in Jetpack Compose geschrieben (kein XML)",
         "Firebase als Backend",
@@ -126,7 +126,19 @@
       ]
     },
     "viewFrontendCode": "Frontend-Code ansehen",
-    "viewBackendCode": "Backend-Code ansehen"
+    "viewBackendCode": "Backend-Code ansehen",
+    "tags": {
+      "fhInternship": "FH-Praktikum",
+      "team": "{count}-Personen-Team",
+      "scrum": "Scrum",
+      "greenKait": "Green Kait",
+      "startupPrototype": "Start-up-Prototyp",
+      "webMobile": "Web & Mobile",
+      "personal": "Persönlich",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fhProject": "FH-Projekt"
+    }
   },
   "contact": {
     "title": "Kontaktiere mich",

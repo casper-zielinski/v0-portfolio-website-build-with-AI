@@ -66,7 +66,7 @@
     "smartKasse": {
       "title": "SmartKassa",
       "description": "Zgodna z RKSV kasa fiskalna i system zarządzania kursami dla austriackich firm taksówkarskich. Z uwierzytelnianiem JWT, generowaniem paragonów i natywną aplikacją mobilną via Capacitor.",
-      "details": "SmartKassa pomaga austriackim firmom taksówkarskim zachować zgodność z przepisami i upraszcza codzienną pracę. Kierowcy zarządzają kursami i wystawiają paragony w natywnej aplikacji mobilnej, a backend obsługuje uwierzytelnianie i przechowywanie danych.",
+      "details": "Ten projekt powstał podczas praktyk na FH JOANNEUM i jest prototypem „SmartKassa”, produktu naszego startupu Zynqly: nowoczesnego systemu kasowego dla taksówek. Pomaga austriackim firmom taksówkarskim zachować zgodność z przepisami i upraszcza codzienną pracę. Kierowcy zarządzają kursami i wystawiają paragony w natywnej aplikacji mobilnej, a backend obsługuje uwierzytelnianie i przechowywanie danych.",
       "features": [
         "Kasa fiskalna zgodna z RKSV",
         "Zarządzanie kursami dla firm taksówkarskich",
@@ -103,7 +103,7 @@
     "blink": {
       "title": "Blink",
       "description": "Blink to natywna aplikacja na Androida, stworzona w ramach przedmiotu „Mobile Platforms” (ćwiczenie 4) na FH JOANNEUM. Prezentuje nowoczesny interfejs użytkownika zbudowany w Jetpack Compose, zgodny z zasadami Material Design 3.",
-      "details": "Minimalistyczny klient mediów społecznościowych, który pozwala pisać aktualizacje statusu i poruszać się między Home, Wyszukiwaniem i Kontem. Jako backend wykorzystuje Firebase, a do przesyłania i przechowywania zdjęć Cloudinary – z naciskiem na czystą implementację w Compose i logikę interfejsu.",
+      "details": "Blink powstał wspólnie z kolegą z zespołu jako projekt na FH JOANNEUM i jest minimalistycznym klientem mediów społecznościowych, który pozwala pisać aktualizacje statusu i poruszać się między Home, Wyszukiwaniem i Kontem. Jako backend wykorzystuje Firebase, a do przesyłania i przechowywania zdjęć Cloudinary – z naciskiem na czystą implementację w Compose i logikę interfejsu.",
       "features": [
         "Napisana w całości w Jetpack Compose (bez XML)",
         "Firebase jako backend",
@@ -126,7 +126,19 @@
       ]
     },
     "viewFrontendCode": "Zobacz kod frontendu",
-    "viewBackendCode": "Zobacz kod backendu"
+    "viewBackendCode": "Zobacz kod backendu",
+    "tags": {
+      "fhInternship": "Praktyki w FH",
+      "team": "Zespół {count}-osobowy",
+      "scrum": "Scrum",
+      "greenKait": "Green Kait",
+      "startupPrototype": "Prototyp startupu",
+      "webMobile": "Web i Mobile",
+      "personal": "Osobisty",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fhProject": "Projekt FH"
+    }
   },
   "contact": {
     "title": "Skontaktuj się ze mną",

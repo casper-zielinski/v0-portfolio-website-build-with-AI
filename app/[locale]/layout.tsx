@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Playfair_Display, Bebas_Neue } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -11,6 +12,17 @@ import { locales } from "@/i18n/request";
 import emailjs from "@emailjs/browser";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
+});
 
 export const metadata: Metadata = {
   title: "Caspers Portfolio",
@@ -40,7 +52,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang="en" suppressHydrationWarning className="scrollbar-hide">
       <body
-        className={`font-sans scrollbar-hide ${GeistSans.variable} ${GeistMono.variable}`}
+        className={`font-sans scrollbar-hide ${GeistSans.variable} ${GeistMono.variable} ${playfair.variable} ${bebas.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ToastContainer />

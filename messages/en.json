@@ -66,7 +66,7 @@
     "smartKasse": {
       "title": "SmartKassa",
       "description": "RKSV-compliant cash register and ride management system for Austrian taxi companies. With JWT authentication, receipt generation, and a native mobile app via Capacitor.",
-      "details": "SmartKassa helps Austrian taxi companies stay compliant while keeping day-to-day work simple. Drivers manage their rides and issue receipts from a native mobile app, while the backend handles authentication and data storage.",
+      "details": "Developed during an internship at FH JOANNEUM, this project is the prototype of \"SmartKassa\", the product of our startup Zynqly: a modern register system for taxis. It helps Austrian taxi companies stay compliant while keeping day-to-day work simple. Drivers manage their rides and issue receipts from a native mobile app, while the backend handles authentication and data storage.",
       "features": [
         "RKSV-compliant cash register",
         "Ride management for taxi companies",
@@ -103,7 +103,7 @@
     "blink": {
       "title": "Blink",
       "description": "Blink is a native Android app built for the \"Mobile Platforms\" course (Exercise 4) at FH JOANNEUM. It demonstrates a modern user interface built with Jetpack Compose and following the principles of Material Design 3.",
-      "details": "A minimalist social media client that lets users write status updates and navigate between Home, Search and Account. It uses Firebase as its backend and Cloudinary to upload and store pictures, with the focus on a clean Compose implementation and UI logic.",
+      "details": "Built together with a team colleague as a project for FH JOANNEUM, Blink is a minimalist social media client that lets users write status updates and navigate between Home, Search and Account. It uses Firebase as its backend and Cloudinary to upload and store pictures, with the focus on a clean Compose implementation and UI logic.",
       "features": [
         "Written entirely in Jetpack Compose (no XML)",
         "Firebase as the backend",
@@ -126,7 +126,19 @@
       ]
     },
     "viewFrontendCode": "View Frontend Code",
-    "viewBackendCode": "View Backend Code"
+    "viewBackendCode": "View Backend Code",
+    "tags": {
+      "fhInternship": "FH Internship",
+      "team": "{count} Person Team",
+      "scrum": "Scrum",
+      "greenKait": "Green Kait",
+      "startupPrototype": "Start Up Prototype",
+      "webMobile": "Web & Mobile",
+      "personal": "Personal",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fhProject": "FH Project"
+    }
   },
   "contact": {
     "title": "Contact Me",

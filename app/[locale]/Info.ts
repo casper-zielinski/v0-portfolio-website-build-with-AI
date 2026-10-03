@@ -26,6 +26,27 @@ export const skills = [
   { name: "Jetpack Compose", category: "Mobile", icon: Smartphone },
 ];
 
+export type ProjectTag = {
+  key: string;
+  count?: number;
+};
+
+// Context badges shown on each project card; labels live in messages/*.json under projects.tags
+export const projectTags = {
+  smartKassa: [
+    { key: "fhInternship" },
+    { key: "team", count: 4 },
+    { key: "scrum" },
+    { key: "greenKait" },
+    { key: "startupPrototype" },
+    { key: "webMobile" },
+  ],
+  socialMedia: [{ key: "personal" }, { key: "web" }],
+  issueTracker: [{ key: "personal" }, { key: "web" }],
+  restaurant: [{ key: "personal" }, { key: "web" }],
+  blink: [{ key: "fhProject" }, { key: "mobile" }, { key: "team", count: 2 }],
+} satisfies Record<string, ProjectTag[]>;
+
 type ProjectTranslator = {
   (key: any): string;
   raw: (key: any) => any;
@@ -52,6 +73,7 @@ export const getProjects = (
       "Capacitor",
     ],
     image: "/Smart-Kassa-Dashboard.png",
+    tags: projectTags.smartKassa,
     projectlink: "https://smart-kassa.vercel.app/",
     githublink: "https://github.com/zynqly-smartkassa/smart-kassa",
   },
@@ -70,6 +92,7 @@ export const getProjects = (
       "Redux",
     ],
     image: "/ai-social-media-app.png",
+    tags: projectTags.socialMedia,
     projectlink: "https://social-media-web-app-weld.vercel.app/",
     githublink: "https://github.com/casper-zielinski/Social-Media-Web-App",
   },
@@ -87,6 +110,7 @@ export const getProjects = (
       "Tailwind CSS",
     ],
     image: "/issue-tracker-dashboard.png",
+    tags: projectTags.issueTracker,
     projectlink: "https://issue-tracker-pearl-alpha.vercel.app/",
     githublink: "https://github.com/casper-zielinski/Issue-Tracker",
   },
@@ -99,6 +123,7 @@ export type Project = {
   features: string[];
   tech: string[];
   image: string;
+  tags: ProjectTag[];
   projectlink: string;
   githublink: string;
   backendlink?: string;
@@ -127,6 +152,7 @@ export const getAllProjects = (
       "Cloudinary",
     ],
     image: "/Blink-Mobile-App.jpeg",
+    tags: projectTags.blink,
     projectlink: "",
     githublink: "https://github.com/casper-zielinski/Blink-Social-Media-App",
   },
@@ -148,6 +174,7 @@ export const getAllProjects = (
       "PostgreSQL",
     ],
     image: "/modern-restaurant-website.png",
+    tags: projectTags.restaurant,
     projectlink: "https://restaurant-bootstrap-gamma.vercel.app/",
     githublink: "https://github.com/casper-zielinski/Restaurant-Bootstrap",
     backendlink:

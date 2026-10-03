@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold mb-4 text-balance"
+            className="font-display text-3xl sm:text-4xl font-normal tracking-wide mb-4 text-balance"
             initial={{ opacity: 0, translateY: -10 }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.8 }}
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
               key={index}
             >
               <Card
-                className={`overflow-hidden hover:shadow-xl bg-primary/20 dark:bg-black/5 transition-shadow group ${
+                className={`overflow-hidden hover:shadow-xl bg-primary/20 transition-shadow group ${index !== 1 && "dark:bg-black/60"} ${
                   index === 1 &&
                   "bg-white/10 dark:bg-black scale-101 md:scale-105 lg:scale-110 border-2 border-primary dark:border-transparent"
                 }`}

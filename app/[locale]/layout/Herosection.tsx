@@ -25,7 +25,7 @@ const Herosection = () => {
               animate={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
                 {t("greeting")}{" "}
                 <span className="text-primary">{t("name")}</span>
               </h1>
