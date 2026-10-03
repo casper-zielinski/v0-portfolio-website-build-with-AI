@@ -2,20 +2,20 @@
 
 A modern, responsive portfolio website showcasing my skills as an aspiring developer studying at FH Joanneum. Built with cutting-edge web technologies and designed with user experience in mind.
 
-🌐 **Live Demo:** [View Portfolio](https://casperzielinski-portfolio.vercel.app/)
+**Live Demo:** [View Portfolio](https://casperzielinski-portfolio.vercel.app/)
 
 ![Portfolio Preview](./public/Portfolio-Website.png)
 
-## ✨ Features
+## Features
 
-- **🌙 Dark/Light Theme Toggle** - Seamless theme switching with system preference detection
-- **🌍 Multi-language Support** - Available in English, German, and Polish
-- **📱 Fully Responsive Design** - Optimized for all devices (320px and above)
-- **🎨 Modern UI/UX** - Clean design with smooth animations and micro-interactions
-- **⚡ Fast Performance** - Built with Next.js for optimal loading speeds
-- **♿ Accessible** - WCAG compliant with proper semantic markup
+- **Dark/Light Theme Toggle** - Seamless theme switching with system preference detection
+- **Multi-language Support** - Available in English, German, and Polish
+- **Fully Responsive Design** - Optimized for all devices (320px and above)
+- **Modern UI/UX** - Clean design with smooth animations and micro-interactions
+- **Fast Performance** - Built with Next.js for optimal loading speeds
+- **Accessible** - WCAG compliant with proper semantic markup
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -30,39 +30,59 @@ A modern, responsive portfolio website showcasing my skills as an aspiring devel
 - **Git & GitHub** - Version control
 - **Vercel** - Deployment platform
 - **npm** - Package management
+- **v0** - AI website builder used to kickstart the project
+- **Claude Code** - AI coding assistant used during development
 
-## 🎯 Skills Showcased
+## AI Assistance
 
-**Programming Languages:** JavaScript, TypeScript, Java, SQL  
-**Libraries & Frameworks:** React, Next.js, Redux, JavaFX  
-**Styling:** Tailwind CSS, DaisyUI, Bootstrap CSS  
-**Backend Services:** Firebase, Supabase  
-**Tools:** Git, GitHub, Maven, npm  
+This portfolio was built with the help of AI. The project was kickstarted with v0, Vercel's AI website builder, and then developed further with Claude Code, Anthropic's AI coding assistant, which I used for parts of the website, such as components, translations and documentation. I directed the work, reviewed the results and made the design and content decisions myself.
 
-## 🚀 Featured Projects
+## Skills Showcased
 
-### 1. Restaurant Website
+**Programming Languages:** TypeScript, Java, Python, Kotlin, SQL  
+**Frameworks and Libaries:** Next.js, React, Express.js, Node.js, Spring Boot
+**Mobile:** Capacitor, Jetpack Compose   
+**Databases and Backend Services:** Firebase, Supabase, PostgreSQL  
+**Tools:** Git  
 
-Modern restaurant website with online ordering system
+## Featured Projects
 
-- **Tech:** Bootstrap, React, TypeScript, Firebase, Express.js
-- **Features:** Menu management, order processing, responsive design
+### 1. SmartKassa
 
-### 2. Issue Tracker
+RKSV-compliant cash register and ride management system for Austrian taxi companies, with a native mobile app.
 
-Full-stack application for project management and bug tracking
+- **Tech:** React, TypeScript, Tailwind CSS, Node.js, Express.js, PostgreSQL, Capacitor
+- **Links:** [Live](https://smart-kassa.vercel.app/) | [Code](https://github.com/zynqly-smartkassa/smart-kassa)
 
-- **Tech:** Next.js, TypeScript, Supabase, shadcn/ui, Tailwind CSS, Radix
-- **Features:** Real-time updates, user authentication, advanced filtering
+### 2. Social Media Web App
 
-### 3. Social Media App with AI Integration
+Interactive social platform with real-time posts, comments, nested replies and live like updates.
 
-AI-powered social platform with intelligent content recommendations
+- **Tech:** Next.js, React, TypeScript, DaisyUI, Tailwind, Firebase, Redux
+- **Links:** [Live](https://social-media-web-app-weld.vercel.app/) | [Code](https://github.com/casper-zielinski/Social-Media-Web-App)
 
-- **Tech:** Next.js, TypeScript, Firebase, Redux, shadcn/ui, Tailwind
-- **Features:** AI content analysis, real-time chat, advanced user interactions
+### 3. Issue Tracker
 
-## 🏃‍♂️ Quick Start
+Project management tool for tracking issues, bugs and tasks with statuses, priorities and user assignments.
+
+- **Tech:** Next.js, React, TypeScript, Supabase, DaisyUI, Tailwind CSS
+- **Links:** [Live](https://issue-tracker-pearl-alpha.vercel.app/) | [Code](https://github.com/casper-zielinski/Issue-Tracker)
+
+### 4. Taverna Luna (Restaurant)
+
+Restaurant website with an online menu and table reservations, backed by a REST API for reservations, tables and customers.
+
+- **Tech:** React, TypeScript, Vite, Bootstrap, React Router, Axios, Java, Spring Boot, Spring Data JPA, PostgreSQL
+- **Links:** [Live](https://restaurant-bootstrap-gamma.vercel.app/) | [Frontend](https://github.com/casper-zielinski/Restaurant-Bootstrap) | [Backend](https://github.com/casper-zielinski/Restaurant-Bootstrap-Backend)
+
+### 5. Blink
+
+Native Android social media app built with Jetpack Compose and Material Design 3 for the "Mobile Platforms" course at FH JOANNEUM.
+
+- **Tech:** Kotlin, Jetpack Compose, Material Design 3, Android, Firebase, Cloudinary
+- **Links:** [Code](https://github.com/casper-zielinski/Blink-Social-Media-App)
+
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -80,7 +100,7 @@ npm run dev
 # Open http://localhost:3000 in your browser
 ```
 
-## 📦 Available Scripts
+## Available Scripts
 
 ```bash
 npm run dev          # Start development server
@@ -90,39 +110,18 @@ npm run lint         # Run ESLint
 npm run type-check   # Run TypeScript compiler
 ```
 
-## 🎨 Customization
-
-The website is built with modularity in mind:
-
-- **Themes:** Modify colors in `tailwind.config.js`
-- **Content:** Update personal information in `src/lib/data.ts`
-- **Components:** Reusable components in `src/components/`
-- **Translations:** Language files in `src/lib/translations/`
-
-## 📱 Responsive Breakpoints
-
-- **Mobile:** 320px - 768px
-- **Tablet:** 768px - 1024px  
-- **Desktop:** 1024px+
-
-## 🌟 Performance
-
-- ⚡ **Lighthouse Score:** 95+ on all metrics
-- 🎯 **Core Web Vitals:** Optimized for speed and user experience
-- 📦 **Bundle Size:** Minimized with code splitting
-
-## 🎓 About Me
+## About Me
 
 I'm Casper Zielinski, a passionate developer studying at FH Joanneum with a focus on modern web technologies. I enjoy creating user-friendly applications that solve real-world problems.
 
 **Contact:** casper.zielinski.work@gmail.com
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-⭐ **Like this project?** Give it a star and feel free to fork it for your own portfolio!
+**Like this project?** Give it a star and feel free to fork it for your own portfolio!
 
-**Built with ❤️ by Casper Zielinski**
+**Built by Casper Zielinski, kickstarted with v0 and developed with Claude Code**
