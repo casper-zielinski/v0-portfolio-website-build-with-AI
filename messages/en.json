@@ -111,7 +111,22 @@
         "Material 3 components and dynamic theming",
         "MVVM-style separation of view and model"
       ]
-    }
+    },
+    "restaurant": {
+      "title": "Taverna Luna",
+      "description": "Restaurant website with an online menu and table reservations, backed by a RESTful API that manages reservations, tables and customers.",
+      "details": "A full-stack restaurant management system split into a React frontend and a Spring Boot backend. Guests can browse the menu and reserve a table, while the REST API stores reservations, tables and customers in a PostgreSQL database.",
+      "features": [
+        "Online menu",
+        "Table reservation with form and confirmation page",
+        "RESTful API for reservations, tables and customers",
+        "Spring Data JPA with a PostgreSQL database",
+        "Layered backend with controllers, services, repositories and DTOs",
+        "Separate frontend and backend repositories"
+      ]
+    },
+    "viewFrontendCode": "View Frontend Code",
+    "viewBackendCode": "View Backend Code"
   },
   "contact": {
     "title": "Contact Me",

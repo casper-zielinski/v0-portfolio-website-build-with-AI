@@ -60,7 +60,15 @@ export const getProjects = (
     description: t_smartkasse("description"),
     details: t_smartkasse("details"),
     features: t_smartkasse.raw("features") as string[],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Capacitor"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Capacitor",
+    ],
     image: "/Smart-Kassa-Dashboard.png",
     projectlink: "https://smart-kassa.vercel.app/",
     githublink: "https://github.com/zynqly-smartkassa/smart-kassa",
@@ -84,22 +92,65 @@ export const getProjects = (
   },
 ];
 
+export type Project = {
+  title: string;
+  description: string;
+  details: string;
+  features: string[];
+  tech: string[];
+  image: string;
+  projectlink: string;
+  githublink: string;
+  backendlink?: string;
+};
+
 export const getAllProjects = (
   t: ProjectTranslator,
   t_smartkasse: ProjectTranslator,
   t_social: ProjectTranslator,
   t_issue: ProjectTranslator,
   t_blink: ProjectTranslator,
-) => [
+  t_restaurant: ProjectTranslator,
+): Project[] => [
   ...getProjects(t, t_smartkasse, t_social, t_issue),
   {
     title: t_blink("title"),
     description: t_blink("description"),
     details: t_blink("details"),
     features: t_blink.raw("features") as string[],
-    tech: ["Kotlin", "Jetpack Compose", "Material Design 3", "Android", "Firebase", "Cloudinary"],
+    tech: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Material Design 3",
+      "Android",
+      "Firebase",
+      "Cloudinary",
+    ],
     image: "/Blink-Mobile-App.jpeg",
     projectlink: "",
     githublink: "https://github.com/casper-zielinski/Blink-Social-Media-App",
+  },
+  {
+    title: t_restaurant("title"),
+    description: t_restaurant("description"),
+    details: t_restaurant("details"),
+    features: t_restaurant.raw("features") as string[],
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Bootstrap",
+      "React Router",
+      "Axios",
+      "Java",
+      "Spring Boot",
+      "Spring Data JPA",
+      "PostgreSQL",
+    ],
+    image: "/modern-restaurant-website.png",
+    projectlink: "https://restaurant-bootstrap-gamma.vercel.app/",
+    githublink: "https://github.com/casper-zielinski/Restaurant-Bootstrap",
+    backendlink:
+      "https://github.com/casper-zielinski/Restaurant-Bootstrap-Backend",
   },
 ];

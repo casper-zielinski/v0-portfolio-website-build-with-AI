@@ -18,8 +18,16 @@ const ProjectsPage = () => {
   const t_social = useTranslations("projects.socialMediaApp");
   const t_issue = useTranslations("projects.issueTracker");
   const t_blink = useTranslations("projects.blink");
+  const t_restaurant = useTranslations("projects.restaurant");
 
-  const projects = getAllProjects(t, t_smartkasse, t_social, t_issue, t_blink);
+  const projects = getAllProjects(
+    t,
+    t_smartkasse,
+    t_social,
+    t_issue,
+    t_blink,
+    t_restaurant,
+  );
 
   return (
     <motion.main
@@ -102,19 +110,39 @@ const ProjectsPage = () => {
                       </Button>
                     </motion.div>
                   )}
-                  <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
+                  {[
+                    {
+                      href: project.githublink,
+                      label: project.backendlink
+                        ? t("viewFrontendCode")
+                        : t("viewCode"),
+                    },
+                    ...(project.backendlink
+                      ? [
+                          {
+                            href: project.backendlink,
+                            label: t("viewBackendCode"),
+                          },
+                        ]
+                      : []),
+                  ].map((link) => (
+                    <motion.div
+                      key={link.href}
+                      whileHover={{ scale: 1.05, translateY: -2 }}
                     >
-                      <a href={project.githublink}>
-                        {t("viewCode")}
-                        <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                  </motion.div>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
+                      >
+                        <a href={link.href}>
+                          {link.label}
+                          <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             </Card>
