@@ -39,7 +39,7 @@
     "yearsExperience": "Years Experience",
     "projectsCompleted": "Projects Completed",
     "techStack": "Tech Stack",
-    "cv":"/Casper_Zielinski_CV_EN.pdf",
+    "cv": "/Casper_Zielinski_CV_EN.pdf",
     "mostUsedLanguages": {
       "title": "Most Used Languages",
       "description": "Programming languages I use the most",
@@ -99,7 +99,19 @@
     },
     "viewAll": "View all projects",
     "backToHome": "Back to home",
-    "features": "Key features"
+    "features": "Key features",
+    "blink": {
+      "title": "Blink",
+      "description": "Blink is a native Android app built for the \"Mobile Platforms\" course (Exercise 4) at FH JOANNEUM. It demonstrates a modern user interface built with Jetpack Compose and following the principles of Material Design 3.",
+      "details": "A minimalist social media client that lets users write status updates and navigate between Home, Search and Account. It uses Firebase as its backend and Cloudinary to upload and store pictures, with the focus on a clean Compose implementation and UI logic.",
+      "features": [
+        "Written entirely in Jetpack Compose (no XML)",
+        "Firebase as the backend",
+        "Picture upload and storage with Cloudinary",
+        "Material 3 components and dynamic theming",
+        "MVVM-style separation of view and model"
+      ]
+    }
   },
   "contact": {
     "title": "Contact Me",

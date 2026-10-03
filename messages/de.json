@@ -99,7 +99,20 @@
     },
     "viewAll": "Alle Projekte anzeigen",
     "backToHome": "Zurück zur Startseite",
-    "features": "Hauptfunktionen"
+    "features": "Hauptfunktionen",
+    "blink": {
+      "title": "Blink",
+      "description": "Blink is a native Android app built for the \"Mobile Platforms\" course (Exercise 4) at FH JOANNEUM. It demonstrates a modern user interface built with Jetpack Compose and following the principles of Material Design 3.",
+      "details": "A minimalist social media client that lets users write status updates and navigate between Home, Search and Account. The focus is on a clean Compose implementation and UI logic, so login screens and a backend were left out on purpose.",
+      "features": [
+        "Written entirely in Jetpack Compose (no XML)",
+        "Bottom navigation bar and top app bar via Scaffold",
+        "PostSender component for writing posts with state management",
+        "Material 3 components and dynamic theming",
+        "UI state persisted with rememberSaveable",
+        "MVVM-style separation of view and model"
+      ]
+    }
   },
   "contact": {
     "title": "Kontaktiere mich",

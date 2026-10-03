@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { getProjects } from "../Info";
+import { getAllProjects } from "../Info";
 
 const ProjectsPage = () => {
   const locale = useLocale();
@@ -17,8 +17,9 @@ const ProjectsPage = () => {
   const t_smartkasse = useTranslations("projects.smartKasse");
   const t_social = useTranslations("projects.socialMediaApp");
   const t_issue = useTranslations("projects.issueTracker");
+  const t_blink = useTranslations("projects.blink");
 
-  const projects = getProjects(t, t_smartkasse, t_social, t_issue);
+  const projects = getAllProjects(t, t_smartkasse, t_social, t_issue, t_blink);
 
   return (
     <motion.main
@@ -27,7 +28,7 @@ const ProjectsPage = () => {
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <Link
           href={`/${locale}`}
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -86,19 +87,21 @@ const ProjectsPage = () => {
                       </Badge>
                     ))}
                   </div>
-                  <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
-                    >
-                      <a href={project.projectlink}>
-                        {t("viewProject")}
-                        <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                  </motion.div>
+                  {project.projectlink && (
+                    <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
+                      >
+                        <a href={project.projectlink}>
+                          {t("viewProject")}
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </motion.div>
+                  )}
                   <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
                     <Button
                       asChild

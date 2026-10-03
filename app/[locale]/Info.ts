@@ -83,3 +83,23 @@ export const getProjects = (
     githublink: "https://github.com/casper-zielinski/Issue-Tracker",
   },
 ];
+
+export const getAllProjects = (
+  t: ProjectTranslator,
+  t_smartkasse: ProjectTranslator,
+  t_social: ProjectTranslator,
+  t_issue: ProjectTranslator,
+  t_blink: ProjectTranslator,
+) => [
+  ...getProjects(t, t_smartkasse, t_social, t_issue),
+  {
+    title: t_blink("title"),
+    description: t_blink("description"),
+    details: t_blink("details"),
+    features: t_blink.raw("features") as string[],
+    tech: ["Kotlin", "Jetpack Compose", "Material Design 3", "Android", "Firebase", "Cloudinary"],
+    image: "/Blink-Mobile-App.jpeg",
+    projectlink: "",
+    githublink: "https://github.com/casper-zielinski/Blink-Social-Media-App",
+  },
+];
