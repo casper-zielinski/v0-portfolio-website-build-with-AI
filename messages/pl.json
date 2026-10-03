@@ -64,9 +64,9 @@
     "viewCode": "Zobacz kod",
     "technologies": "Technologie",
     "smartKasse": {
-      "title": "SmartKasse",
+      "title": "SmartKassa",
       "description": "Zgodna z RKSV kasa fiskalna i system zarządzania kursami dla austriackich firm taksówkarskich. Z uwierzytelnianiem JWT, generowaniem paragonów i natywną aplikacją mobilną via Capacitor.",
-      "details": "SmartKasse pomaga austriackim firmom taksówkarskim zachować zgodność z przepisami i upraszcza codzienną pracę. Kierowcy zarządzają kursami i wystawiają paragony w natywnej aplikacji mobilnej, a backend obsługuje uwierzytelnianie i przechowywanie danych.",
+      "details": "SmartKassa pomaga austriackim firmom taksówkarskim zachować zgodność z przepisami i upraszcza codzienną pracę. Kierowcy zarządzają kursami i wystawiają paragony w natywnej aplikacji mobilnej, a backend obsługuje uwierzytelnianie i przechowywanie danych.",
       "features": [
         "Kasa fiskalna zgodna z RKSV",
         "Zarządzanie kursami dla firm taksówkarskich",
@@ -102,32 +102,31 @@
     "features": "Główne funkcje",
     "blink": {
       "title": "Blink",
-      "description": "Blink is a native Android app built for the \"Mobile Platforms\" course (Exercise 4) at FH JOANNEUM. It demonstrates a modern user interface built with Jetpack Compose and following the principles of Material Design 3.",
-      "details": "A minimalist social media client that lets users write status updates and navigate between Home, Search and Account. The focus is on a clean Compose implementation and UI logic, so login screens and a backend were left out on purpose.",
+      "description": "Blink to natywna aplikacja na Androida, stworzona w ramach przedmiotu „Mobile Platforms” (ćwiczenie 4) na FH JOANNEUM. Prezentuje nowoczesny interfejs użytkownika zbudowany w Jetpack Compose, zgodny z zasadami Material Design 3.",
+      "details": "Minimalistyczny klient mediów społecznościowych, który pozwala pisać aktualizacje statusu i poruszać się między Home, Wyszukiwaniem i Kontem. Jako backend wykorzystuje Firebase, a do przesyłania i przechowywania zdjęć Cloudinary – z naciskiem na czystą implementację w Compose i logikę interfejsu.",
       "features": [
-        "Written entirely in Jetpack Compose (no XML)",
-        "Bottom navigation bar and top app bar via Scaffold",
-        "PostSender component for writing posts with state management",
-        "Material 3 components and dynamic theming",
-        "UI state persisted with rememberSaveable",
-        "MVVM-style separation of view and model"
+        "Napisana w całości w Jetpack Compose (bez XML)",
+        "Firebase jako backend",
+        "Przesyłanie i przechowywanie zdjęć w Cloudinary",
+        "Komponenty Material 3 i dynamiczne motywy",
+        "Rozdzielenie widoku i modelu w stylu MVVM"
       ]
     },
     "restaurant": {
       "title": "Taverna Luna",
-      "description": "Restaurant website with an online menu and table reservations, backed by a RESTful API that manages reservations, tables and customers.",
-      "details": "A full-stack restaurant management system split into a React frontend and a Spring Boot backend. Guests can browse the menu and reserve a table, while the REST API stores reservations, tables and customers in a PostgreSQL database.",
+      "description": "Strona restauracji z menu online i rezerwacją stolików, wspierana przez RESTful API zarządzające rezerwacjami, stolikami i klientami.",
+      "details": "Pełnostackowy system zarządzania restauracją, podzielony na frontend w React i backend w Spring Boot. Goście mogą przeglądać menu i rezerwować stolik, a REST API zapisuje rezerwacje, stoliki i klientów w bazie danych PostgreSQL.",
       "features": [
-        "Online menu",
-        "Table reservation with form and confirmation page",
-        "RESTful API for reservations, tables and customers",
-        "Spring Data JPA with a PostgreSQL database",
-        "Layered backend with controllers, services, repositories and DTOs",
-        "Separate frontend and backend repositories"
+        "Menu online",
+        "Rezerwacja stolika z formularzem i stroną potwierdzenia",
+        "RESTful API dla rezerwacji, stolików i klientów",
+        "Spring Data JPA z bazą danych PostgreSQL",
+        "Warstwowy backend z kontrolerami, serwisami, repozytoriami i DTO",
+        "Oddzielne repozytoria frontendu i backendu"
       ]
     },
-    "viewFrontendCode": "View Frontend Code",
-    "viewBackendCode": "View Backend Code"
+    "viewFrontendCode": "Zobacz kod frontendu",
+    "viewBackendCode": "Zobacz kod backendu"
   },
   "contact": {
     "title": "Skontaktuj się ze mną",

@@ -64,9 +64,9 @@
     "viewCode": "View Code",
     "technologies": "Technologies",
     "smartKasse": {
-      "title": "SmartKasse",
+      "title": "SmartKassa",
       "description": "RKSV-compliant cash register and ride management system for Austrian taxi companies. With JWT authentication, receipt generation, and a native mobile app via Capacitor.",
-      "details": "SmartKasse helps Austrian taxi companies stay compliant while keeping day-to-day work simple. Drivers manage their rides and issue receipts from a native mobile app, while the backend handles authentication and data storage.",
+      "details": "SmartKassa helps Austrian taxi companies stay compliant while keeping day-to-day work simple. Drivers manage their rides and issue receipts from a native mobile app, while the backend handles authentication and data storage.",
       "features": [
         "RKSV-compliant cash register",
         "Ride management for taxi companies",
