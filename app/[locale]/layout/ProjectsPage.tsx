@@ -9,26 +9,14 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { getAllProjects } from "../Info";
+import { useAllProjectsCards } from "../hooks/useProjectsCards";
 
 const ProjectsPage = () => {
   const locale = useLocale();
   const t = useTranslations("projects");
-  const t_smartkasse = useTranslations("projects.smartKasse");
-  const t_social = useTranslations("projects.socialMediaApp");
-  const t_issue = useTranslations("projects.issueTracker");
-  const t_blink = useTranslations("projects.blink");
-  const t_restaurant = useTranslations("projects.restaurant");
   const t_tags = useTranslations("projects.tags");
 
-  const projects = getAllProjects(
-    t,
-    t_smartkasse,
-    t_social,
-    t_issue,
-    t_blink,
-    t_restaurant,
-  );
+  const projects = useAllProjectsCards();
 
   return (
     <motion.main
@@ -42,7 +30,7 @@ const ProjectsPage = () => {
           href={`/${locale}`}
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="ml-4 w-4 h-4" />
           {t("backToHome")}
         </Link>
 
@@ -53,7 +41,7 @@ const ProjectsPage = () => {
           <p className="text-muted-foreground">{t("description")}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 p-2 lg:p-0 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
@@ -81,9 +69,7 @@ const ProjectsPage = () => {
                     </Badge>
                   ))}
                 </div>
-                <p className="font-semibold">
-                  {project.description}
-                </p>
+                <p className="font-semibold">{project.description}</p>
                 <p className="text-sm">{project.details}</p>
                 <div>
                   <h3 className="text-sm font-semibold mb-2">

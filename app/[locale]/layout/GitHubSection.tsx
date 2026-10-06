@@ -5,11 +5,12 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import React from "react";
 import { useThemeContext } from "../hooks/ThemeProviderContext";
-import { GitHubStats } from "@/constants/GithubStats";
+import { useGitHubCards } from "../hooks/useGitHubCards";
 import { useTranslations } from "next-intl";
 
 const GitHubSection = () => {
   const t = useTranslations("github");
+  const githubCards = useGitHubCards();
 
   const { getCurrentTheme, mounted } = useThemeContext();
 
@@ -29,23 +30,7 @@ const GitHubSection = () => {
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center place-items-center">
-          {GitHubStats(
-            t("contributionSnake.title"),
-            t("contributionSnake.description"),
-            "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg",
-            "https://raw.githubusercontent.com/casper-zielinski/casper-zielinski/output/github-contribution-grid-snake.svg",
-            t("contributionSnake.altText"),
-            t("stats.title"),
-            t("stats.description"),
-            "/GitHubStats-Light.svg",
-            "/GitHubStats-Dark.svg",
-            t("stats.altText"),
-            t("repositories.title"),
-            t("repositories.description"),
-            "https://streak-stats.demolab.com?user=casper-zielinski&fire=1E90FF&ring=1E90FF&currStreakLabel=1E90FF&hide_border=true",
-            "https://streak-stats.demolab.com?user=casper-zielinski&theme=github-dark-blue&hide_border=true",
-            t("repositories.altText"),
-          ).map((CurrentCard, index) => (
+          {githubCards.map((CurrentCard, index) => (
             <motion.div
               className={`col-span-1 ${
                 index === 0 ? "md:col-span-2" : "md:col-span-1"

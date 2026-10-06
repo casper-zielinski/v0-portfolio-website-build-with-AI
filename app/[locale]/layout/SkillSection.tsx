@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
-import { skills } from "../Info";
+import { skills } from "../info/skills";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp } from "lucide-react";

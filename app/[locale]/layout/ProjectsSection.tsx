@@ -7,7 +7,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React from "react";
-import { getProjects } from "../Info";
+import { useProjectsCards } from "../hooks/useProjectsCards";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -16,11 +16,7 @@ const ProjectsSection = () => {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("projects");
-  const t_smartkasse = useTranslations("projects.smartKasse");
-  const t_social = useTranslations("projects.socialMediaApp");
-  const t_issue = useTranslations("projects.issueTracker");
-
-  const projects = getProjects(t, t_smartkasse, t_social, t_issue);
+  const projects = useProjectsCards();
 
   return (
     <section id="projects" className="py-20">
