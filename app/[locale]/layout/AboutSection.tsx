@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useThemeContext } from "../hooks/ThemeProviderContext";
 
-const CvViewer = dynamic(() => import("./CvViewer"), { ssr: false });
+const CvViewer = dynamic(() => import("../../../components/CvViewer"), { ssr: false });
 
 const AboutSection = () => {
   const t = useTranslations("about");

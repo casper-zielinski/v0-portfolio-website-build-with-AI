@@ -1,12 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, X, Menu } from "lucide-react";
-import { useTheme } from "next-themes";
+import { X, Menu } from "lucide-react";
 import { useRouter } from "next/navigation";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
-import Cookies from "js-cookie";
 import { useLocale, useTranslations } from "next-intl";
 import {
   DropdownMenu,
@@ -17,9 +15,7 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu";
-import ThemeProviderContext, {
-  useThemeContext,
-} from "@/app/[locale]/hooks/ThemeProviderContext";
+import ThemeSwitchButton from "@/components/ThemeSwitchButton";
 
 {
   /* Navigation */
@@ -30,8 +26,6 @@ const NavSection = () => {
   const router = useRouter();
   const base = `/${useLocale()}`;
   const t = useTranslations("navigation");
-
-  const { getCurrentTheme, toggleTheme, mounted } = useThemeContext();
 
   function setLanguagePage(path: string) {
     setLanguage(path);
@@ -107,25 +101,12 @@ const NavSection = () => {
 
           {/* Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleTheme}
-                title="Theme-Switcher"
-                className="text-black dark:text-white cursor-pointer"
-              >
-                {mounted ? (
-                  getCurrentTheme() === "dark" ? (
-                    <Moon />
-                  ) : (
-                    <Sun />
-                  )
-                ) : (
-                  <div className="rounded-4xl bg-accent animate-pulse w-6 h-6" />
-                )}
-              </Button>
-            </motion.div>
+            <ThemeSwitchButton
+              className={"text-black dark:text-white cursor-pointer"}
+              whileHoverScale={1.1}
+              whileTapScale={0.95}
+              whileTapTranslateY={0}
+            />
 
             {/* Langauge Switcher */}
             <DropdownMenu>
@@ -226,29 +207,12 @@ const NavSection = () => {
             >
               {t("contact")}
             </motion.a>
-            <motion.div
+            <ThemeSwitchButton
               className="flex items-center justify-between px-3 py-2"
-              whileHover={{ translateY: -3.5 }}
-              whileTap={{ scale: 1.01 }}
-            >
-              <Button
-                variant="ghost"
-                size="sm"
-                className="border cursor-pointer"
-                onClick={toggleTheme}
-                title={`Current theme: ${getCurrentTheme()}`}
-              >
-                {mounted ? (
-                  getCurrentTheme() === "dark" ? (
-                    <Moon />
-                  ) : (
-                    <Sun />
-                  )
-                ) : (
-                  <div className="rounded-4xl bg-accent animate-pulse w-6 h-6" />
-                )}
-              </Button>
-            </motion.div>
+              whileHoverScale={1}
+              whileTapScale={1}
+              whileTapTranslateY={-3.5}
+            />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline">{t("openLanguageMenu")}</Button>
