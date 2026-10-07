@@ -1,0 +1,1 @@
+export const sections = ["home","about","projects","skills","github","contact"];
