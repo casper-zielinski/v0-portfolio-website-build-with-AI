@@ -46,11 +46,11 @@ const GitHubSection = () => {
               }}
             >
               <Card
-                className={`w-full h-full transition-all hover:shadow-2xl focus:shadow-2xl p-2 sm:p-4 dark:bg-black/60`}
+                className={`w-full h-full transition-all hover:shadow-2xl focus:shadow-2xl p-2 sm:p-4 bg-primary/10 dark:bg-black/60`}
               >
                 <CardHeader>
                   <p className="text-center font-bold">{CurrentCard.header}</p>
-                  <p className="text-center text-sm text-gray-400">
+                  <p className="text-center text-sm text-gray-800 dark:text-gray-400">
                     {CurrentCard.headerSecondary}
                   </p>
                 </CardHeader>

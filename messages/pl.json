@@ -196,8 +196,20 @@
     "items": {
       "aiFluencyForBuilders": {
         "title": "AI Fluency for Builders",
-        "description": "Ten kurs pozwala builderom rozwijać kompetencje w zakresie AI, a dzięki temu zwiększać wpływ i efektywność, zachowując odpowiedzialność za cały proces od problemu do dostarczonego rozwiązania. Obejmuje model 4D (Delegation, Description, Discernment, Diligence), mocne strony i granice obecnej AI, pisanie testów akceptacyjnych przed powstaniem jakiegokolwiek kodu, przekładanie potrzeb użytkownika na precyzyjne polecenia dla AI, ocenę pracy wygenerowanej przez AI według pięciu perspektyw (poprawność, jakość, dopasowanie, doświadczenie i odpowiedzialność) oraz decyzję: dostarczyć, naprawić czy zatrzymać."
+        "description": "Ten kurs pozwala builderom rozwijać kompetencje w zakresie AI, a dzięki temu zwiększać wpływ i efektywność, zachowując odpowiedzialność za cały proces od problemu do dostarczonego rozwiązania. Obejmuje model 4D (Delegation, Description, Discernment, Diligence), mocne strony i granice obecnej AI, pisanie testów akceptacyjnych przed powstaniem jakiegokolwiek kodu, przekładanie potrzeb użytkownika na precyzyjne polecenia dla AI, ocenę pracy wygenerowanej przez AI według pięciu perspektyw (poprawność, jakość, dopasowanie, doświadczenie i odpowiedzialność) oraz decyzję: dostarczyć, naprawić czy zatrzymać.",
+        "issuer": "Claude Academy"
+      },
+      "ecdlStandard": {
+        "title": "Certyfikat ECDL Standard",
+        "issuer": "Austriackie Towarzystwo Informatyczne (OCG)",
+        "description": "ECDL, dziś ICDL (International Certification of Digital Literacy), to międzynarodowo uznawany certyfikat standardowy potwierdzający podstawowe i praktyczne umiejętności cyfrowe. Poziom Standard obejmuje siedem modułów: Podstawy pracy z komputerem, Podstawy pracy w sieci, Przetwarzanie tekstów, Arkusze kalkulacyjne, Prezentacje, Współpraca online i Bezpieczeństwo IT. Zdobyłem go w BORG Dreierschützengasse."
+      },
+      "googleDeveloperProgram": {
+        "title": "Google Developer Program: Jetpack Compose Essentials",
+        "issuer": "Google Developer Program",
+        "description": "Mój profil w Google Developer Program z odznaką Jetpack Compose Essentials. Zdobywa się ją po ukończeniu ścieżki nauki Google dotyczącej tworzenia interfejsów użytkownika na Androida z Jetpack Compose. Oprócz niej zdobyłem także inne odznaki, które znajdziesz na moim profilu."
       }
-    }
+    },
+    "viewProfile": "Zobacz profil"
   }
 }

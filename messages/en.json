@@ -196,8 +196,20 @@
     "items": {
       "aiFluencyForBuilders": {
         "title": "AI Fluency for Builders",
-        "description": "This course enables builders to develop AI fluency and so increase impact and efficiency, while staying true to owning the whole arc from problem to shipped solution. It covers the 4D model (Delegation, Description, Discernment, Diligence), what current AI does well and where it reliably reaches its limits, writing acceptance tests before any code exists, turning a user need into a precise AI instruction, judging AI-generated work through five lenses (correctness, quality, fit, experience and responsibility), and deciding whether to ship, fix or stop."
+        "description": "This course enables builders to develop AI fluency and so increase impact and efficiency, while staying true to owning the whole arc from problem to shipped solution. It covers the 4D model (Delegation, Description, Discernment, Diligence), what current AI does well and where it reliably reaches its limits, writing acceptance tests before any code exists, turning a user need into a precise AI instruction, judging AI-generated work through five lenses (correctness, quality, fit, experience and responsibility), and deciding whether to ship, fix or stop.",
+        "issuer": "Claude Academy"
+      },
+      "ecdlStandard": {
+        "title": "ECDL Standard Certificate",
+        "issuer": "Austrian Computer Society (OCG)",
+        "description": "The ECDL, now called ICDL (International Certification of Digital Literacy), is an internationally recognised standard certificate that proves basic and practical digital skills. The Standard level covers seven modules: Computer Essentials, Online Essentials, Word Processing, Spreadsheets, Presentation, Online Collaboration and IT Security. I earned it at BORG Dreierschützengasse."
+      },
+      "googleDeveloperProgram": {
+        "title": "Google Developer Program: Jetpack Compose Essentials",
+        "issuer": "Google Developer Program",
+        "description": "My Google Developer Program profile, featuring the Jetpack Compose Essentials badge. It is earned by completing the Google learning path for building Android user interfaces with Jetpack Compose. Besides this one, I have earned other badges as well, which you can find on my profile."
       }
-    }
+    },
+    "viewProfile": "View Profile"
   }
 }

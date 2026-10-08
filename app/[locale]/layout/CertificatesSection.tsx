@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, ExternalLink } from "lucide-react";
+import { Download, ExternalLink, User } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -45,54 +45,87 @@ const CertificatesSection = () => {
               key={index}
             >
               <Card className="h-full overflow-hidden hover:shadow-xl bg-primary/20 dark:bg-black/60 transition-shadow group">
-                <div className="overflow-hidden">
+                <div
+                  className={`overflow-hidden ${
+                    certificate.imageCrop ? "aspect-4/3 bg-white" : ""
+                  }`}
+                >
                   <Image
                     src={certificate.image}
                     alt={certificate.title}
-                    width={1100}
-                    height={806}
-                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                    width={certificate.imageWidth}
+                    height={certificate.imageHeight}
+                    className={`w-full group-hover:scale-105 transition-transform duration-300 ${
+                      certificate.imageCrop
+                        ? "h-full object-cover scale-150 group-hover:scale-155"
+                        : "h-auto"
+                    }`}
                   />
                 </div>
                 <div className="p-6 space-y-4 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold">{certificate.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {certificate.issuer} · {certificate.issuedLabel}
+                  <p className="text-sm text-black/90 dark:text-white/90">
+                    {[certificate.issuer, certificate.issuedLabel]
+                      .filter(Boolean)
+                      .join(" · ")}
                   </p>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-black/80 dark:text-white/60 text-sm">
                     {certificate.description}
                   </p>
                   <div className="mt-auto space-y-4 pt-2">
-                    <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
-                      <Button
-                        asChild
-                        variant="outline"
-                        size="sm"
-                        className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
-                      >
-                        <a
-                          href={certificate.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                    {certificate.link && (
+                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="w-full group bg-primary/30 cursor-pointer dark:hover:bg-primary"
                         >
-                          {t("viewBadge")}
-                          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </a>
-                      </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
-                      <Button
-                        asChild
-                        variant="outline"
-                        size="sm"
-                        className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
-                      >
-                        <a href={certificate.pdf} download>
-                          {t("downloadPdf")}
-                          <Download className="w-4 h-4 ml-2 group-hover:translate-y-0.5 transition-transform" />
-                        </a>
-                      </Button>
-                    </motion.div>
+                          <a
+                            href={certificate.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {t("viewBadge")}
+                            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </a>
+                        </Button>
+                      </motion.div>
+                    )}
+                    {certificate.profileLink && (
+                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="w-full group bg-primary/60 cursor-pointer dark:hover:bg-primary"
+                        >
+                          <a
+                            href={certificate.profileLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {t("viewProfile")}
+                            <User className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </a>
+                        </Button>
+                      </motion.div>
+                    )}
+                    {certificate.pdf && (
+                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="w-full group bg-secondary cursor-pointer dark:hover:bg-secondary"
+                        >
+                          <a href={certificate.pdf} download>
+                            {t("downloadPdf")}
+                            <Download className="w-4 h-4 ml-2 group-hover:translate-y-0.5 transition-transform" />
+                          </a>
+                        </Button>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
               </Card>

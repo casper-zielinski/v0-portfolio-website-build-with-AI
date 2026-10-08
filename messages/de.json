@@ -196,8 +196,20 @@
     "items": {
       "aiFluencyForBuilders": {
         "title": "AI Fluency for Builders",
-        "description": "Dieser Kurs befähigt Builder, KI-Kompetenz zu entwickeln und so Wirkung und Effizienz zu steigern, während sie die Verantwortung für den gesamten Bogen vom Problem bis zur ausgelieferten Lösung behalten. Er behandelt das 4D-Modell (Delegation, Description, Discernment, Diligence), die Stärken und Grenzen aktueller KI, das Schreiben von Abnahmetests vor der ersten Zeile Code, die Übersetzung eines Nutzerbedürfnisses in eine präzise KI-Anweisung, die Bewertung KI-generierter Arbeit anhand von fünf Linsen (Korrektheit, Qualität, Passung, Erfahrung und Verantwortung) sowie die Entscheidung, auszuliefern, zu beheben oder zu stoppen."
+        "description": "Dieser Kurs befähigt Builder, KI-Kompetenz zu entwickeln und so Wirkung und Effizienz zu steigern, während sie die Verantwortung für den gesamten Bogen vom Problem bis zur ausgelieferten Lösung behalten. Er behandelt das 4D-Modell (Delegation, Description, Discernment, Diligence), die Stärken und Grenzen aktueller KI, das Schreiben von Abnahmetests vor der ersten Zeile Code, die Übersetzung eines Nutzerbedürfnisses in eine präzise KI-Anweisung, die Bewertung KI-generierter Arbeit anhand von fünf Linsen (Korrektheit, Qualität, Passung, Erfahrung und Verantwortung) sowie die Entscheidung, auszuliefern, zu beheben oder zu stoppen.",
+        "issuer": "Claude Academy"
+      },
+      "ecdlStandard": {
+        "title": "ECDL Standard Zertifikat",
+        "issuer": "Österreichische Computer Gesellschaft (OCG)",
+        "description": "Der ECDL, heute ICDL (International Certification of Digital Literacy), ist ein international anerkanntes Standardzertifikat zum Nachweis grundlegender und praktischer digitaler Kompetenzen. Die Stufe Standard umfasst sieben Module: Computer-Grundlagen, Online-Grundlagen, Textverarbeitung, Tabellenkalkulation, Präsentation, Online Zusammenarbeit und IT Security. Ich habe es am BORG Dreierschützengasse erworben."
+      },
+      "googleDeveloperProgram": {
+        "title": "Google Developer Program: Jetpack Compose Essentials",
+        "issuer": "Google Developer Program",
+        "description": "Mein Profil im Google Developer Program mit dem Jetpack-Compose-Essentials-Badge. Es wird mit dem Abschluss des Google-Lernpfads zum Erstellen von Android-Benutzeroberflächen mit Jetpack Compose erworben. Neben diesem habe ich auch weitere Badges erhalten, die du auf meinem Profil findest."
       }
-    }
+    },
+    "viewProfile": "Profil ansehen"
   }
 }
