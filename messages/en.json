@@ -2,8 +2,9 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "skills": "Skills",
     "projects": "Projects",
+    "skills": "Skills",
+    "certificates": "Certificates",
     "github": "GitHub",
     "contact": "Contact",
     "openLanguageMenu": "🇬🇧 Open",
@@ -185,6 +186,18 @@
       "title": "Top Repositories",
       "description": "Featured repositories showcasing my most significant contributions and projects",
       "altText": "Top contributed repositories overview"
+    }
+  },
+  "certificates": {
+    "title": "Certificates & Badges",
+    "viewBadge": "View Badge",
+    "downloadPdf": "Download PDF",
+    "issued": "Issued {date}",
+    "items": {
+      "aiFluencyForBuilders": {
+        "title": "AI Fluency for Builders",
+        "description": "This course enables builders to develop AI fluency and so increase impact and efficiency, while staying true to owning the whole arc from problem to shipped solution. It covers the 4D model (Delegation, Description, Discernment, Diligence), what current AI does well and where it reliably reaches its limits, writing acceptance tests before any code exists, turning a user need into a precise AI instruction, judging AI-generated work through five lenses (correctness, quality, fit, experience and responsibility), and deciding whether to ship, fix or stop."
+      }
     }
   }
 }

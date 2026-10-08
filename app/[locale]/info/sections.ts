@@ -1,1 +1,1 @@
-export const sections = ["home","about","projects","skills","github","contact"];
+export const sections = ["home","about","projects","skills","certificates","github","contact"];

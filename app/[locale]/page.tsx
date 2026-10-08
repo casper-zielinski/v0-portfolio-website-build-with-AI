@@ -6,6 +6,7 @@ import ProjectsSection from "./layout/ProjectsSection";
 import ContactSection from "./layout/ContactSection";
 import Footer from "./layout/Footer";
 import GitHubSection from "./layout/GitHubSection";
+import CertificatesSection from "./layout/CertificatesSection";
 import ThemeProviderContext from "./hooks/ThemeProviderContext";
 
 export default function Portfolio() {
@@ -22,6 +23,8 @@ export default function Portfolio() {
         <ProjectsSection />
         {/* Skills Section */}
         <SkillSection />
+        {/* Certificates Section */}
+        <CertificatesSection />
         {/* GitHub Section */}
         <GitHubSection />
         {/* Contact Section */}

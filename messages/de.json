@@ -2,8 +2,9 @@
   "navigation": {
     "home": "Startseite",
     "about": "Über mich",
-    "skills": "Fähigkeiten",
     "projects": "Projekte",
+    "skills": "Fähigkeiten",
+    "certificates": "Zertifikate",
     "github": "GitHub",
     "contact": "Kontakt",
     "openLanguageMenu": "🇩🇪 Öffnen",
@@ -185,6 +186,18 @@
       "title": "Top-Repositories",
       "description": "Ausgewählte Repositories mit meinen bedeutendsten Beiträgen und Projekten",
       "altText": "Übersicht der am meisten beigetragenen Repositories"
+    }
+  },
+  "certificates": {
+    "title": "Zertifikate & Badges",
+    "viewBadge": "Badge ansehen",
+    "downloadPdf": "PDF herunterladen",
+    "issued": "Ausgestellt am {date}",
+    "items": {
+      "aiFluencyForBuilders": {
+        "title": "AI Fluency for Builders",
+        "description": "Dieser Kurs befähigt Builder, KI-Kompetenz zu entwickeln und so Wirkung und Effizienz zu steigern, während sie die Verantwortung für den gesamten Bogen vom Problem bis zur ausgelieferten Lösung behalten. Er behandelt das 4D-Modell (Delegation, Description, Discernment, Diligence), die Stärken und Grenzen aktueller KI, das Schreiben von Abnahmetests vor der ersten Zeile Code, die Übersetzung eines Nutzerbedürfnisses in eine präzise KI-Anweisung, die Bewertung KI-generierter Arbeit anhand von fünf Linsen (Korrektheit, Qualität, Passung, Erfahrung und Verantwortung) sowie die Entscheidung, auszuliefern, zu beheben oder zu stoppen."
+      }
     }
   }
 }
