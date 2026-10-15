@@ -4,16 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React from "react";
 import { useProjectsCards } from "../hooks/useProjectsCards";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { openInNewTab } from "@/utils/openInNewTab";
 
 const ProjectsSection = () => {
-  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("projects");
   const projects = useProjectsCards();
@@ -84,7 +83,7 @@ const ProjectsSection = () => {
                       variant="outline"
                       size="sm"
                       className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
-                      onClick={() => router.push(project.projectlink)}
+                      onClick={() => openInNewTab(project.projectlink)}
                     >
                       {t("viewProject")}
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -95,7 +94,7 @@ const ProjectsSection = () => {
                       variant="outline"
                       size="sm"
                       className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
-                      onClick={() => router.push(project.githublink)}
+                      onClick={() => openInNewTab(project.githublink)}
                     >
                       {t("viewCode")}
                       <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />

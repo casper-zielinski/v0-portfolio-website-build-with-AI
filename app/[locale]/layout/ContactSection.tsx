@@ -6,15 +6,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
-import { useRouter } from "next/navigation";
 import React, { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import emailjs from "@emailjs/browser";
 import { Slide, toast } from "react-toastify";
 import { sendEmail } from "@/utils/sendEmail";
+import { openInNewTab } from "@/utils/openInNewTab";
 
 const ContactSection = () => {
-  const router = useRouter();
   const t = useTranslations("contact");
   const form = useRef(null);
   const [email, setEmail] = useState("");
@@ -76,7 +75,7 @@ const ContactSection = () => {
                     variant="outline"
                     size="sm"
                     onClick={() =>
-                      router.push("https://github.com/casper-zielinski")
+                      openInNewTab("https://github.com/casper-zielinski")
                     }
                     className="cursor-pointer"
                   >
@@ -89,7 +88,7 @@ const ContactSection = () => {
                     variant="outline"
                     size="sm"
                     onClick={() =>
-                      router.push(
+                      openInNewTab(
                         "https://www.linkedin.com/in/casper-zielinski-ab6650348/"
                       )
                     }
