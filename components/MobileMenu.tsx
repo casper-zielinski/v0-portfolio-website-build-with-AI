@@ -11,7 +11,7 @@ const MobileMenu = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <motion.div
-        className="md:hidden"
+        className="xl:hidden"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -30,7 +30,7 @@ const MobileMenu = ({ children }: { children: React.ReactNode }) => {
 
       {isMenuOpen && (
         <div
-          className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border"
+          className="xl:hidden absolute top-full left-0 w-full bg-background border-b border-border"
           onClick={(e) => {
             // close the menu after a section link was clicked
             if ((e.target as HTMLElement).closest("a")) setIsMenuOpen(false);

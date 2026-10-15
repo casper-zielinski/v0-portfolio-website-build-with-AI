@@ -5,6 +5,7 @@ import HomeButton from "@/components/HomeButton";
 import NavLink from "@/components/NavLink";
 import { sections } from "../info/sections";
 import MobileMenu from "@/components/MobileMenu";
+import SocialLinks from "@/components/SocialLinks";
 
 {
   /* Navigation */
@@ -12,19 +13,22 @@ import MobileMenu from "@/components/MobileMenu";
 const NavSection = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16">
           <HomeButton />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             {sections.map((section, index) => (
               <NavLink section={section} isMobile={false} key={index} />
             ))}
           </div>
 
           {/* Theme Toggle */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
+            {/* Social Links */}
+            <SocialLinks />
+
             <ThemeSwitchButton
               className={"text-black dark:text-white cursor-pointer"}
               whileHoverScale={1.1}
@@ -49,7 +53,10 @@ const NavSection = () => {
               whileTapScale={1}
               whileTapTranslateY={-3.5}
             />
-            <LanguageSwitchButton />
+            <div className="flex items-center gap-2 px-3">
+              <LanguageSwitchButton />
+              <SocialLinks />
+            </div>
           </MobileMenu>
         </div>
       </div>
