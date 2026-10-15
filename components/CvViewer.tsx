@@ -1,7 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -30,8 +29,6 @@ const CvViewer = ({ file }: { file: string }) => {
   const t = useTranslations("about");
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState<number>();
-  const [numPages, setNumPages] = useState(0);
-  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -47,11 +44,10 @@ const CvViewer = ({ file }: { file: string }) => {
     <div className="rounded-xl border border-primary/30 bg-white shadow-xl overflow-hidden">
       <div
         ref={containerRef}
-        className="flex justify-center bg-white p-2 sm:p-6 max-h-[80vh] overflow-auto"
+        className="flex justify-center bg-white p-2 sm:p-6 h-[45vh] md:h-[70vh] min-h-[250px] max-h-[55vh] md:max-h-[1000px] xl:max-h-[1200px] resize-y overflow-auto"
       >
         <Document
           file={file}
-          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
           loading={
             <div className="flex items-center gap-2 py-20 text-muted-foreground">
               <Loader2 className="h-5 w-5 animate-spin" />
@@ -64,39 +60,13 @@ const CvViewer = ({ file }: { file: string }) => {
         >
           {width && (
             <Page
-              pageNumber={page}
+              pageNumber={1}
               width={width - 16}
               className="shadow-lg"
             />
           )}
         </Document>
       </div>
-
-      {numPages > 1 && (
-        <div className="flex items-center justify-center gap-4 border-t border-primary/20 p-3">
-          <Button
-            variant="outline"
-            size="icon"
-            aria-label={t("cvPrevPage")}
-            disabled={page <= 1}
-            onClick={() => setPage((p) => p - 1)}
-          >
-            <ChevronLeft />
-          </Button>
-          <span className="text-sm text-muted-foreground">
-            {t("cvPage", { current: page, total: numPages })}
-          </span>
-          <Button
-            variant="outline"
-            size="icon"
-            aria-label={t("cvNextPage")}
-            disabled={page >= numPages}
-            onClick={() => setPage((p) => p + 1)}
-          >
-            <ChevronRight />
-          </Button>
-        </div>
-      )}
     </div>
   );
 };
