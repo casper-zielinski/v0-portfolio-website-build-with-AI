@@ -16,7 +16,7 @@ export interface Certificate {
 
 // Static part of a certificate; `key` points to the texts in messages/*.json under "certificates.items"
 export interface CertificateConfig {
-  key: "aiFluencyForBuilders" | "ecdlStandard" | "googleDeveloperProgram";
+  key: "aiFluencyForBuilders" | "claudeCode101" | "ecdlStandard" | "googleDeveloperProgram";
   // ISO date, formatted by the hook depending on the locale
   issued?: string;
   image: string;
@@ -42,13 +42,22 @@ export const certificateCards: CertificateConfig[] = [
     pdf: "/claude-academy-badge-ai-fluency-for-builders.pdf",
   },
   {
-    key: "ecdlStandard",
-    issued: "2021-12-26",
-    image: "/ECDL_Standard_Certificate.png",
-    imageWidth: 1380,
-    imageHeight: 707,
-    pdf: "/ECDL_Standard_Certificate.pdf",
+    key: "claudeCode101",
+    issued: "2026-10-16",
+    image: "/claude-academy-badge-claude-code-101.png",
+    imageWidth: 1846,
+    imageHeight: 1349,
+    link: "https://academy.claude.com/courses/claude-code-101",
+    pdf: "/claude-academy-badge-claude-code-101.pdf",
   },
+  // {
+  //   key: "ecdlStandard",
+  //   issued: "2021-12-26",
+  //   image: "/ECDL_Standard_Certificate.png",
+  //   imageWidth: 1380,
+  //   imageHeight: 707,
+  //   pdf: "/ECDL_Standard_Certificate.pdf",
+  // },
   {
     key: "googleDeveloperProgram",
     image: "/compose_esentials.png",

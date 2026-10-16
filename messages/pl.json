@@ -196,6 +196,11 @@
         "description": "Ten kurs pozwala builderom rozwijać kompetencje w zakresie AI, a dzięki temu zwiększać wpływ i efektywność, zachowując odpowiedzialność za cały proces od problemu do dostarczonego rozwiązania. Obejmuje model 4D (Delegation, Description, Discernment, Diligence), mocne strony i granice obecnej AI, pisanie testów akceptacyjnych przed powstaniem jakiegokolwiek kodu, przekładanie potrzeb użytkownika na precyzyjne polecenia dla AI, ocenę pracy wygenerowanej przez AI według pięciu perspektyw (poprawność, jakość, dopasowanie, doświadczenie i odpowiedzialność) oraz decyzję: dostarczyć, naprawić czy zatrzymać.",
         "issuer": "Claude Academy"
       },
+      "claudeCode101": {
+        "title": "Claude Code 101",
+        "issuer": "Claude Academy",
+        "description": "An agentic coding tool that lives in your terminal. This course covers the fundamentals of Claude Code: the agentic loop, context window management, tools and permissions, effective prompting with Plan Mode, and the Explore → Plan → Code → Commit workflow. It also covers CLAUDE.md for persistent project memory, custom subagents, MCP server integration, and hooks for deterministic control over formatting and notifications."
+      },
       "ecdlStandard": {
         "title": "Certyfikat ECDL Standard",
         "issuer": "Austriackie Towarzystwo Informatyczne (OCG)",
