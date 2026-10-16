@@ -212,6 +212,8 @@
         "description": "Mój profil w Google Developer Program z odznaką Jetpack Compose Essentials. Zdobywa się ją po ukończeniu ścieżki nauki Google dotyczącej tworzenia interfejsów użytkownika na Androida z Jetpack Compose. Oprócz niej zdobyłem także inne odznaki, które znajdziesz na moim profilu."
       }
     },
-    "viewProfile": "Zobacz profil"
+    "viewProfile": "Zobacz profil",
+    "viewAll": "Zobacz wszystkie certyfikaty",
+    "backToHome": "Powrót do strony głównej"
   }
 }

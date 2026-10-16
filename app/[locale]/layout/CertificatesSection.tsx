@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Download, ExternalLink, User } from "lucide-react";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { useCertificatesCards } from "../hooks/useCertificatesCards";
 
 const CertificatesSection = () => {
   const t = useTranslations("certificates");
+  const locale = useLocale();
   const certificates = useCertificatesCards();
 
   return (
@@ -131,6 +133,15 @@ const CertificatesSection = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Link
+            href={`/${locale}/certificates`}
+            className="underline underline-offset-4 text-lg font-medium hover:text-primary transition-colors cursor-pointer"
+          >
+            {t("viewAll")}
+          </Link>
         </div>
       </div>
     </section>

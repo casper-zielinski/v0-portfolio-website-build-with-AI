@@ -1,16 +1,11 @@
 import { useFormatter, useTranslations } from "next-intl";
 import { certificateCards, Certificate } from "../info/certificates";
 
-/**
- * Combines the static certificate data (links, images, date) from info/certificates.ts
- * with the translated texts of the "certificates" namespace.
- * @returns the certificates in display order
- */
-export const useCertificatesCards = (): Certificate[] => {
+const useTranslatedCertificates = (): Certificate[] => {
   const t = useTranslations("certificates");
   const format = useFormatter();
 
-  return certificateCards.map(({ key, issued, ...certificate }) => ({
+  return certificateCards.map(({ key, issued, featured: _featured, ...certificate }) => ({
     ...certificate,
     title: t(`items.${key}.title`),
     description: t(`items.${key}.description`),
@@ -22,3 +17,17 @@ export const useCertificatesCards = (): Certificate[] => {
       : undefined,
   }));
 };
+
+/**
+ * @returns the featured certificates shown in the certificates section of the main page
+ */
+export const useCertificatesCards = (): Certificate[] => {
+  const all = useTranslatedCertificates();
+  return all.filter((_, i) => certificateCards[i].featured);
+};
+
+/**
+ * @returns all certificates shown on the certificates page
+ */
+export const useAllCertificatesCards = (): Certificate[] =>
+  useTranslatedCertificates();

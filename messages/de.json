@@ -212,6 +212,8 @@
         "description": "Mein Profil im Google Developer Program mit dem Jetpack-Compose-Essentials-Badge. Es wird mit dem Abschluss des Google-Lernpfads zum Erstellen von Android-Benutzeroberflächen mit Jetpack Compose erworben. Neben diesem habe ich auch weitere Badges erhalten, die du auf meinem Profil findest."
       }
     },
-    "viewProfile": "Profil ansehen"
+    "viewProfile": "Profil ansehen",
+    "viewAll": "Alle Zertifikate ansehen",
+    "backToHome": "Zurück zur Startseite"
   }
 }

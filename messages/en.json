@@ -212,6 +212,8 @@
         "description": "My Google Developer Program profile, featuring the Jetpack Compose Essentials badge. It is earned by completing the Google learning path for building Android user interfaces with Jetpack Compose. Besides this one, I have earned other badges as well, which you can find on my profile."
       }
     },
-    "viewProfile": "View Profile"
+    "viewProfile": "View Profile",
+    "viewAll": "View all certificates",
+    "backToHome": "Back to home"
   }
 }

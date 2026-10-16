@@ -17,6 +17,8 @@ export interface Certificate {
 // Static part of a certificate; `key` points to the texts in messages/*.json under "certificates.items"
 export interface CertificateConfig {
   key: "aiFluencyForBuilders" | "claudeCode101" | "ecdlStandard" | "googleDeveloperProgram";
+  // certificates shown in the home section; all of them are shown on the certificates page
+  featured: boolean;
   // ISO date, formatted by the hook depending on the locale
   issued?: string;
   image: string;
@@ -34,6 +36,7 @@ export interface CertificateConfig {
 export const certificateCards: CertificateConfig[] = [
   {
     key: "aiFluencyForBuilders",
+    featured: true,
     issued: "2026-10-01",
     image: "/claude-academy-badge-ai-fluency-for-builders.jpg",
     imageWidth: 3300,
@@ -43,6 +46,7 @@ export const certificateCards: CertificateConfig[] = [
   },
   {
     key: "claudeCode101",
+    featured: true,
     issued: "2026-10-16",
     image: "/claude-academy-badge-claude-code-101.png",
     imageWidth: 1846,
@@ -50,16 +54,18 @@ export const certificateCards: CertificateConfig[] = [
     link: "https://academy.claude.com/courses/claude-code-101",
     pdf: "/claude-academy-badge-claude-code-101.pdf",
   },
-  // {
-  //   key: "ecdlStandard",
-  //   issued: "2021-12-26",
-  //   image: "/ECDL_Standard_Certificate.png",
-  //   imageWidth: 1380,
-  //   imageHeight: 707,
-  //   pdf: "/ECDL_Standard_Certificate.pdf",
-  // },
+  {
+    key: "ecdlStandard",
+    featured: false,
+    issued: "2021-12-26",
+    image: "/ECDL_Standard_Certificate.png",
+    imageWidth: 1380,
+    imageHeight: 707,
+    pdf: "/ECDL_Standard_Certificate.pdf",
+  },
   {
     key: "googleDeveloperProgram",
+    featured: true,
     image: "/compose_esentials.png",
     imageWidth: 737,
     imageHeight: 692,
