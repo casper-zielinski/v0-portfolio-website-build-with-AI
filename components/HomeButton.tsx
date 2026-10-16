@@ -12,7 +12,7 @@ const HomeButton = () => {
   return (
     <motion.div
       className="font-bold text-xl text-primary cursor-pointer hover:bg-gray-300 hover:shadow dark:hover:bg-accent p-2 rounded"
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.025 }}
       whileTap={{ scale: 0.95 }}
       onClick={() => router.push(`${base}#home`)}
     >

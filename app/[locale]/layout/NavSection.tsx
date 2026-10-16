@@ -13,12 +13,12 @@ import SocialLinks from "@/components/SocialLinks";
 const NavSection = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-8">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <HomeButton />
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-10">
             {sections.map((section, index) => (
               <NavLink section={section} isMobile={false} key={index} />
             ))}

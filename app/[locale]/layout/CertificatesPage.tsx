@@ -73,7 +73,7 @@ const CertificatesPage = () => {
                   </p>
                   <div className="mt-auto space-y-4 pt-2">
                     {certificate.link && (
-                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                      <motion.div whileHover={{ scale: 1.02, translateY: -2 }}>
                         <Button
                           asChild
                           variant="outline"
@@ -92,7 +92,7 @@ const CertificatesPage = () => {
                       </motion.div>
                     )}
                     {certificate.profileLink && (
-                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                      <motion.div whileHover={{ scale: 1.02, translateY: -2 }}>
                         <Button
                           asChild
                           variant="outline"
@@ -111,7 +111,7 @@ const CertificatesPage = () => {
                       </motion.div>
                     )}
                     {certificate.pdf && (
-                      <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                      <motion.div whileHover={{ scale: 1.02, translateY: -2 }}>
                         <Button
                           asChild
                           variant="outline"

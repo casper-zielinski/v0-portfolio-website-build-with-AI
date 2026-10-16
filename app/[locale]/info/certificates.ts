@@ -51,7 +51,7 @@ export const certificateCards: CertificateConfig[] = [
     image: "/claude-academy-badge-claude-code-101.png",
     imageWidth: 1846,
     imageHeight: 1349,
-    link: "https://academy.claude.com/courses/claude-code-101",
+    link: "https://academy.claude.com/badges/b3988b5f-1189-4b5e-9aca-72908f8e6f76",
     pdf: "/claude-academy-badge-claude-code-101.pdf",
   },
   {

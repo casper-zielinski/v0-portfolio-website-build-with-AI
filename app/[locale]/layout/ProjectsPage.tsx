@@ -94,14 +94,14 @@ const ProjectsPage = () => {
                     ))}
                   </div>
                   {project.projectlink && (
-                    <motion.div whileHover={{ scale: 1.05, translateY: -2 }}>
+                    <motion.div whileHover={{ scale: 1.02, translateY: -2 }}>
                       <Button
                         asChild
                         variant="outline"
                         size="sm"
                         className="w-full group bg-transparent cursor-pointer dark:hover:bg-primary"
                       >
-                        <a href={project.projectlink}>
+                        <a href={project.projectlink} target="_blank" rel="noopener noreferrer">
                           {t("viewProject")}
                           <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </a>
@@ -126,7 +126,7 @@ const ProjectsPage = () => {
                   ].map((link) => (
                     <motion.div
                       key={link.href}
-                      whileHover={{ scale: 1.05, translateY: -2 }}
+                      whileHover={{ scale: 1.02, translateY: -2 }}
                     >
                       <Button
                         asChild
@@ -134,7 +134,7 @@ const ProjectsPage = () => {
                         size="sm"
                         className="w-full group bg-transparent cursor-pointer dark:hover:bg-secondary"
                       >
-                        <a href={link.href}>
+                        <a href={link.href} target="_blank" rel="noopener noreferrer">
                           {link.label}
                           <Github className="w-4 h-4 ml-4 group-hover:translate-x-1 transition-transform" />
                         </a>
