@@ -199,12 +199,12 @@
       "claudeCode101": {
         "title": "Claude Code 101",
         "issuer": "Claude Academy",
-        "description": "An agentic coding tool that lives in your terminal. This course covers the fundamentals of Claude Code: the agentic loop, context window management, tools and permissions, effective prompting with Plan Mode, and the Explore → Plan → Code → Commit workflow. It also covers CLAUDE.md for persistent project memory, custom subagents, MCP server integration, and hooks for deterministic control over formatting and notifications."
+        "description": "Ein agentisches Coding-Tool, das in deinem Terminal läuft. Dieser Kurs behandelt die Grundlagen von Claude Code: die agentische Schleife (Agentic Loop), das Management des Kontextfensters, Tools und Berechtigungen, effektives Prompting mit dem Plan Mode sowie den Workflow Explore → Plan → Code → Commit. Außerdem geht es um CLAUDE.md als dauerhaftes Projektgedächtnis, eigene Subagents, die Integration von MCP-Servern und Hooks für deterministische Kontrolle über Formatierung und Benachrichtigungen."
       },
       "claudeCodeInAction": {
         "title": "Claude Code in Action",
         "issuer": "Claude Academy",
-        "description": "Run long, hands-off Claude Code sessions you can trust: steer, configure, automate, and verify. This course covers scoping work with plan mode, directing compaction and using the rewind menu; writing a lean CLAUDE.md, packaging repeated procedures as skills, choosing permission modes and enforcing rules with hooks; automating repeat work with cloud scheduled tasks, headless mode, managed code review and the GitHub action; and verifying unsupervised runs, gating turns on real test results and packaging a trusted setup as a plugin for the whole team."
+        "description": "Lange, weitgehend selbstständige Claude-Code-Sessions, denen du vertrauen kannst: steuern, konfigurieren, automatisieren und überprüfen. Der Kurs behandelt das Eingrenzen von Aufgaben mit dem Plan Mode, die gezielte Steuerung der Kompaktierung und das Rewind-Menü; das Schreiben einer schlanken CLAUDE.md, das Bündeln wiederkehrender Abläufe als Skills, die Wahl des passenden Permission Mode und das Durchsetzen von Regeln mit Hooks; das Automatisieren wiederkehrender Arbeit mit Cloud-Scheduled-Tasks, dem Headless-Modus, Managed Code Review und der GitHub Action; sowie das Überprüfen unbeaufsichtigter Läufe, das Absichern von Turns über echte Testergebnisse und das Paketieren eines bewährten Setups als Plugin für das ganze Team."
       },
       "ecdlStandard": {
         "title": "ECDL Standard Zertifikat",
